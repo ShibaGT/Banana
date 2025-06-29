@@ -3,7 +3,6 @@ C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Debug\net8.0-windows\Ba
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Debug\net8.0-windows\Banana.runtimeconfig.json
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Debug\net8.0-windows\Banana.dll
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Debug\net8.0-windows\Banana.pdb
-C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.Form1.resources
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.csproj.GenerateResource.cache
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.AssemblyInfoInputs.cache
@@ -15,3 +14,7 @@ C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\re
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.pdb
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.genruntimeconfig.cache
 C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\ref\Banana.dll
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.csproj.AssemblyReference.cache
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.Banana.resources
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\obj\Debug\net8.0-windows\Banana.csproj.Up2Date

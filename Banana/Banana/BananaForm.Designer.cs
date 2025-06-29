@@ -91,6 +91,8 @@
             mods = new Button();
             download = new Button();
             disableenable = new Button();
+            discord = new Button();
+            version = new Label();
             control.SuspendLayout();
             cheats.SuspendLayout();
             panel2.SuspendLayout();
@@ -705,9 +707,9 @@
             label4.ForeColor = Color.White;
             label4.Location = new Point(6, 13);
             label4.Name = "label4";
-            label4.Size = new Size(144, 30);
+            label4.Size = new Size(144, 45);
             label4.TabIndex = 8;
-            label4.Text = "ShibaGT - Making banana\r\nBzbz - Some design ideas\r\n";
+            label4.Text = "ShibaGT - Making banana\r\nBzbz - Some design ideas\r\niiDk - some github help";
             // 
             // label1
             // 
@@ -791,6 +793,10 @@
             // disableenable
             // 
             disableenable.BackColor = Color.Red;
+            disableenable.BackgroundImageLayout = ImageLayout.None;
+            disableenable.FlatAppearance.BorderColor = Color.Black;
+            disableenable.FlatAppearance.BorderSize = 0;
+            disableenable.FlatStyle = FlatStyle.Popup;
             disableenable.Location = new Point(518, 144);
             disableenable.Name = "disableenable";
             disableenable.Size = new Size(102, 28);
@@ -799,12 +805,37 @@
             disableenable.UseVisualStyleBackColor = false;
             disableenable.Click += disableenable_Click;
             // 
+            // discord
+            // 
+            discord.BackColor = Color.FromArgb(88, 101, 242);
+            discord.FlatStyle = FlatStyle.Popup;
+            discord.Location = new Point(518, 250);
+            discord.Name = "discord";
+            discord.Size = new Size(102, 28);
+            discord.TabIndex = 9;
+            discord.Text = "Discord";
+            discord.UseVisualStyleBackColor = false;
+            discord.Click += discord_Click;
+            // 
+            // version
+            // 
+            version.AutoSize = true;
+            version.BackColor = Color.Transparent;
+            version.ForeColor = Color.White;
+            version.Location = new Point(395, 9);
+            version.Name = "version";
+            version.Size = new Size(117, 15);
+            version.TabIndex = 10;
+            version.Text = "Banana Version: 1.0.1";
+            // 
             // Banana
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(16, 16, 16);
             ClientSize = new Size(632, 323);
+            Controls.Add(version);
+            Controls.Add(discord);
             Controls.Add(disableenable);
             Controls.Add(download);
             Controls.Add(mods);
@@ -926,5 +957,7 @@
         private Label label23;
         private CheckBox media;
         private Button disableenable;
+        private Button discord;
+        private Label version;
     }
 }

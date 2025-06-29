@@ -19,7 +19,7 @@ namespace Banana
 
         static string gtaglocation = getgtpath();
         string bananaDir = Path.Combine(gtaglocation, "Gorilla Tag_Data", "Banana");
-        string currentVersion = "1.0.1";
+        string currentVersion = "1.0.2";
         static string getgtpath() //YES this is chatgpt YES im lazy YES the rest is coded by me fuck OFF!
         {
             string steam = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam")?.GetValue("SteamPath")?.ToString().Replace("/", "\\");
@@ -57,6 +57,7 @@ namespace Banana
         private void Form1_Load(object sender, EventArgs e)
         {
             string versionPath = Path.Combine(bananaDir, "banana_version.txt");
+            version.Text = "Banana Version: " + currentVersion;
             File.WriteAllText(versionPath, currentVersion);
 
             label1.Text = gtaglocation;
@@ -241,6 +242,16 @@ namespace Banana
                 disableenable.BackColor = Color.Green;
                 disableenable.Text = "Enable Mods";
             }
+        }
+
+        private void discord_Click(object sender, EventArgs e)
+        {
+            var ps = new ProcessStartInfo("https://discord.gg/NtgqZkwuPy")
+            {
+                UseShellExecute = true,
+                Verb = "open"
+            };
+            Process.Start(ps);
         }
     }
 }
