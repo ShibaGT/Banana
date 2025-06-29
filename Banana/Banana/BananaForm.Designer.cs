@@ -1,6 +1,5 @@
 ﻿namespace Banana
 {
-    // This ui looks awful, I hate you shiba for making me look at this ui.
     partial class Banana
     {
         /// <summary>
