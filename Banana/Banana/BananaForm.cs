@@ -15,7 +15,7 @@ namespace Banana
         }
 
         private readonly string baseUrl = "https://raw.githubusercontent.com/ShibaGT/Banana/main/";
-        private const string modsListUrl = "https://raw.githubusercontent.com/SteveTheAnimator/YourRepo/main/modInfo.txt";     
+        private const string modsListUrl = "https://raw.githubusercontent.com/SteveTheAnimator/Banana_Cleaned/refs/heads/main/Banana/Banana/modInfo.txt";     
 
         private static readonly string gtaglocation = GetGtPath();
         private readonly string bananaDir = Path.Combine(gtaglocation, "Gorilla Tag_Data", "Banana");
@@ -197,7 +197,6 @@ namespace Banana
                         await GetDownloadFromGithub(mod.Source).ConfigureAwait(false);
                         w.DownloadFile(githubDownload, destPath);
                     }
-                    status.Text = mod.StatusText;
                 }
             }
 
