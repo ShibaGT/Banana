@@ -1,31 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kevin\\Documents\\GitHub\\Banana\\Banana\\Banana\\Banana.csproj": {}
+    "C:\\Users\\harlo\\source\\repos\\Banana_Cleaned\\Banana_Cleaned\\Banana\\Banana\\Banana.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kevin\\Documents\\GitHub\\Banana\\Banana\\Banana\\Banana.csproj": {
+    "C:\\Users\\harlo\\source\\repos\\Banana_Cleaned\\Banana_Cleaned\\Banana\\Banana\\Banana.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kevin\\Documents\\GitHub\\Banana\\Banana\\Banana\\Banana.csproj",
+        "projectUniqueName": "C:\\Users\\harlo\\source\\repos\\Banana_Cleaned\\Banana_Cleaned\\Banana\\Banana\\Banana.csproj",
         "projectName": "Banana",
-        "projectPath": "C:\\Users\\kevin\\Documents\\GitHub\\Banana\\Banana\\Banana\\Banana.csproj",
-        "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kevin\\Documents\\GitHub\\Banana\\Banana\\Banana\\obj\\",
+        "projectPath": "C:\\Users\\harlo\\source\\repos\\Banana_Cleaned\\Banana_Cleaned\\Banana\\Banana\\Banana.csproj",
+        "packagesPath": "C:\\Users\\harlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\harlo\\source\\repos\\Banana_Cleaned\\Banana_Cleaned\\Banana\\Banana\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\harlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Users\\harlo\\AppData\\Roaming\\Cosmos User Kit\\packages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,7 +48,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0-windows7.0": {
@@ -74,7 +78,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
