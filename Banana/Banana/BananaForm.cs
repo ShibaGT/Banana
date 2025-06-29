@@ -237,7 +237,7 @@ namespace Banana
                 status.Text = "walksim";
             }
 
-            if (unknown.Checked) //ttt
+            if (unknown.Checked)
             {
                 DownloadFromRepo("Unkown'sNameTagMod.dll", pluginsloc + "Unkown'sNameTagMod.dll"); 
                 status.Text = "unknowntags";
