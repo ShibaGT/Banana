@@ -23,4 +23,4 @@ Whether you're a casual player or a mod creator, Banana makes it easy to stay ah
 
 ### 📥 Download
 
-Coming soon!
+[Download Here!](https://github.com/ShibaGT/Banana/releases/latest/download/Banana.exe)
