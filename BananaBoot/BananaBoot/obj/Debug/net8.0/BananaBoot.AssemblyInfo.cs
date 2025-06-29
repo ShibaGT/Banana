@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BananaBoot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb05d387ebc7c3da850f126cf0052e63f53215a2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f5d086e4c00279fb768614ef6dc0a359813d5387")]
 [assembly: System.Reflection.AssemblyProductAttribute("BananaBoot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BananaBoot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
