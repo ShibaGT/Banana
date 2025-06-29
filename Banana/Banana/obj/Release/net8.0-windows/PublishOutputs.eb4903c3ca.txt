@@ -1,0 +1,6 @@
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Release\net8.0-windows\publish\Banana.exe
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Release\net8.0-windows\publish\Banana.dll
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Release\net8.0-windows\publish\Banana.deps.json
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Release\net8.0-windows\publish\Banana.runtimeconfig.json
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Release\net8.0-windows\publish\Banana.pdb
+C:\Users\kevin\Documents\GitHub\Banana\Banana\Banana\bin\Release\net8.0-windows\publish\Newtonsoft.Json.dll

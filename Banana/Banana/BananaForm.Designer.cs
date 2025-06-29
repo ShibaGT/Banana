@@ -132,7 +132,6 @@
             cheats.Size = new Size(492, 231);
             cheats.TabIndex = 0;
             cheats.Text = "Cheats";
-            cheats.Click += tabPage1_Click;
             // 
             // panel2
             // 
@@ -568,7 +567,6 @@
             haste.TabIndex = 9;
             haste.Text = "Haste";
             haste.UseVisualStyleBackColor = true;
-            haste.CheckedChanged += haste_CheckedChanged;
             // 
             // panel4
             // 
@@ -677,7 +675,6 @@
             bepinex.TabIndex = 9;
             bepinex.Text = "BepInEx";
             bepinex.UseVisualStyleBackColor = true;
-            bepinex.CheckedChanged += bepinex_CheckedChanged;
             // 
             // label5
             // 
@@ -723,7 +720,6 @@
             label1.Size = new Size(258, 17);
             label1.TabIndex = 1;
             label1.Text = "gmae installaiton location awujfbewfiujwehfew";
-            label1.Click += label1_Click;
             // 
             // label2
             // 
@@ -761,7 +757,6 @@
             label3.TabIndex = 4;
             label3.Text = "Status";
             label3.TextAlign = ContentAlignment.MiddleLeft;
-            label3.Click += label3_Click;
             // 
             // game
             // 

@@ -19,7 +19,7 @@ namespace Banana
 
         static string gtaglocation = getgtpath();
         string bananaDir = Path.Combine(gtaglocation, "Gorilla Tag_Data", "Banana");
-        string currentVersion = "1.0.0";
+        string currentVersion = "1.0.1";
         static string getgtpath() //YES this is chatgpt YES im lazy YES the rest is coded by me fuck OFF!
         {
             string steam = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam")?.GetValue("SteamPath")?.ToString().Replace("/", "\\");
@@ -39,18 +39,6 @@ namespace Banana
         }
 
         WebClient w = new WebClient();
-
-        private string GetReleaseVersion(string repo)
-        {
-            //iiDk-the-actual/iis.Stupid.Menu example dingus
-            string url = $"https://api.github.com/repos/{repo}/releases/latest";
-
-            string response = w.DownloadString(url);
-            Newtonsoft.Json.Linq.JObject release = Newtonsoft.Json.Linq.JObject.Parse(response);
-
-            string title = release["name"]?.ToString() ?? "(no title)";
-            return title;
-        }
 
         string githubDownload;
 
@@ -77,21 +65,6 @@ namespace Banana
             disableenableupdate();
         }
 
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void game_Click(object sender, EventArgs e)
         {
             string cleanPath = gtaglocation.Replace(@"\\", @"\");
@@ -102,17 +75,6 @@ namespace Banana
         {
             string cleanPath = gtaglocation.Replace(@"\\", @"\");
             Process.Start("explorer.exe", cleanPath + "\\BepInEx\\plugins");
-        }
-
-        //haste
-        private void haste_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bepinex_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         public static void bepinexshit() //chatgpt bepinex shit yes yes ik wha ta skid fuck you
@@ -143,6 +105,8 @@ namespace Banana
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
             Directory.CreateDirectory(targetPath + "\\BepInEx\\plugins");
+
+            File.WriteAllText(targetPath + "\\BepInEx\\config\\BepInEx.cfg", "[Caching]\r\n\r\n## Enable/disable assembly metadata cache\r\n## Enabling this will speed up discovery of plugins and patchers by caching the metadata of all types BepInEx discovers.\r\n# Setting type: Boolean\r\n# Default value: true\r\nEnableAssemblyCache = true\r\n\r\n[Chainloader]\r\n\r\n## If enabled, hides BepInEx Manager GameObject from Unity.\r\n## This can fix loading issues in some games that attempt to prevent BepInEx from being loaded.\r\n## Use this only if you know what this option means, as it can affect functionality of some older plugins.\r\n## \r\n# Setting type: Boolean\r\n# Default value: false\r\nHideManagerGameObject = true\r\n\r\n[Harmony.Logger]\r\n\r\n## Specifies which Harmony log channels to listen to.\r\n## NOTE: IL channel dumps the whole patch methods, use only when needed!\r\n# Setting type: LogChannel\r\n# Default value: Warn, Error\r\n# Acceptable values: None, Info, IL, Warn, Error, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogChannels = Warn, Error\r\n\r\n[Logging]\r\n\r\n## Enables showing unity log messages in the BepInEx logging system.\r\n# Setting type: Boolean\r\n# Default value: true\r\nUnityLogListening = true\r\n\r\n## If enabled, writes Standard Output messages to Unity log\r\n## NOTE: By default, Unity does so automatically. Only use this option if no console messages are visible in Unity log\r\n## \r\n# Setting type: Boolean\r\n# Default value: false\r\nLogConsoleToUnityLog = false\r\n\r\n[Logging.Console]\r\n\r\n## Enables showing a console for log output.\r\n# Setting type: Boolean\r\n# Default value: false\r\nEnabled = true\r\n\r\n## If enabled, will prevent closing the console (either by deleting the close button or in other platform-specific way).\r\n# Setting type: Boolean\r\n# Default value: false\r\nPreventClose = false\r\n\r\n## If true, console is set to the Shift-JIS encoding, otherwise UTF-8 encoding.\r\n# Setting type: Boolean\r\n# Default value: false\r\nShiftJisEncoding = false\r\n\r\n## Hints console manager on what handle to assign as StandardOut. Possible values:\r\n## Auto - lets BepInEx decide how to redirect console output\r\n## ConsoleOut - prefer redirecting to console output; if possible, closes original standard output\r\n## StandardOut - prefer redirecting to standard output; if possible, closes console out\r\n## \r\n# Setting type: ConsoleOutRedirectType\r\n# Default value: Auto\r\n# Acceptable values: Auto, ConsoleOut, StandardOut\r\nStandardOutType = Auto\r\n\r\n## Which log levels to show in the console output.\r\n# Setting type: LogLevel\r\n# Default value: Fatal, Error, Warning, Message, Info\r\n# Acceptable values: None, Fatal, Error, Warning, Message, Info, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogLevels = Fatal, Error, Warning, Message, Info\r\n\r\n[Logging.Disk]\r\n\r\n## Include unity log messages in log file output.\r\n# Setting type: Boolean\r\n# Default value: false\r\nWriteUnityLog = false\r\n\r\n## Appends to the log file instead of overwriting, on game startup.\r\n# Setting type: Boolean\r\n# Default value: false\r\nAppendLog = false\r\n\r\n## Enables writing log messages to disk.\r\n# Setting type: Boolean\r\n# Default value: true\r\nEnabled = true\r\n\r\n## Which log leves are saved to the disk log output.\r\n# Setting type: LogLevel\r\n# Default value: Fatal, Error, Warning, Message, Info\r\n# Acceptable values: None, Fatal, Error, Warning, Message, Info, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogLevels = Fatal, Error, Warning, Message, Info\r\n\r\n[Preloader]\r\n\r\n## Enables or disables runtime patches.\r\n## This should always be true, unless you cannot start the game due to a Harmony related issue (such as running .NET Standard runtime) or you know what you're doing.\r\n# Setting type: Boolean\r\n# Default value: true\r\nApplyRuntimePatches = true\r\n\r\n## Specifies which MonoMod backend to use for Harmony patches. Auto uses the best available backend.\r\n## This setting should only be used for development purposes (e.g. debugging in dnSpy). Other code might override this setting.\r\n# Setting type: MonoModBackend\r\n# Default value: auto\r\n# Acceptable values: auto, dynamicmethod, methodbuilder, cecil\r\nHarmonyBackend = auto\r\n\r\n## If enabled, BepInEx will save patched assemblies into BepInEx/DumpedAssemblies.\r\n## This can be used by developers to inspect and debug preloader patchers.\r\n# Setting type: Boolean\r\n# Default value: false\r\nDumpAssemblies = false\r\n\r\n## If enabled, BepInEx will load patched assemblies from BepInEx/DumpedAssemblies instead of memory.\r\n## This can be used to be able to load patched assemblies into debuggers like dnSpy.\r\n## If set to true, will override DumpAssemblies.\r\n# Setting type: Boolean\r\n# Default value: false\r\nLoadDumpedAssemblies = false\r\n\r\n## If enabled, BepInEx will call Debugger.Break() once before loading patched assemblies.\r\n## This can be used with debuggers like dnSpy to install breakpoints into patched assemblies before they are loaded.\r\n# Setting type: Boolean\r\n# Default value: false\r\nBreakBeforeLoadAssemblies = false\r\n\r\n[Preloader.Entrypoint]\r\n\r\n## The local filename of the assembly to target.\r\n# Setting type: String\r\n# Default value: UnityEngine.CoreModule.dll\r\nAssembly = UnityEngine.CoreModule.dll\r\n\r\n## The name of the type in the entrypoint assembly to search for the entrypoint method.\r\n# Setting type: String\r\n# Default value: Application\r\nType = Application\r\n\r\n## The name of the method in the specified entrypoint assembly and type to hook and load Chainloader from.\r\n# Setting type: String\r\n# Default value: .cctor\r\nMethod = .cctor\r\n\r\n");
         }
 
         private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target) //chatgpt too pal
