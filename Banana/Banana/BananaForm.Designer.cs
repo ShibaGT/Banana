@@ -31,6 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Banana));
             control = new TabControl();
             cheats = new TabPage();
+            panel17 = new Panel();
+            panel18 = new Panel();
+            label24 = new Label();
+            checkBox4 = new CheckBox();
+            label25 = new Label();
+            ue = new CheckBox();
             panel2 = new Panel();
             panel15 = new Panel();
             panel16 = new Panel();
@@ -95,6 +101,8 @@
             version = new Label();
             control.SuspendLayout();
             cheats.SuspendLayout();
+            panel17.SuspendLayout();
+            panel18.SuspendLayout();
             panel2.SuspendLayout();
             panel15.SuspendLayout();
             panel16.SuspendLayout();
@@ -135,10 +143,76 @@
             cheats.TabIndex = 0;
             cheats.Text = "Cheats";
             // 
+            // panel17
+            // 
+            panel17.BackColor = Color.FromArgb(32, 32, 32);
+            panel17.Controls.Add(panel18);
+            panel17.Controls.Add(label25);
+            panel17.Controls.Add(ue);
+            panel17.Location = new Point(-3, 370);
+            panel17.Name = "panel17";
+            panel17.Size = new Size(470, 23);
+            panel17.TabIndex = 18;
+            // 
+            // panel18
+            // 
+            panel18.BackColor = Color.FromArgb(32, 32, 32);
+            panel18.Controls.Add(label24);
+            panel18.Controls.Add(checkBox4);
+            panel18.Location = new Point(3, 22);
+            panel18.Name = "panel18";
+            panel18.Size = new Size(480, 23);
+            panel18.TabIndex = 15;
+            // 
+            // label24
+            // 
+            label24.AutoSize = true;
+            label24.BackColor = Color.Transparent;
+            label24.ForeColor = Color.White;
+            label24.Location = new Point(281, 4);
+            label24.Name = "label24";
+            label24.Size = new Size(128, 15);
+            label24.TabIndex = 8;
+            label24.Text = "ShibaGT (Original Kyle)";
+            // 
+            // checkBox4
+            // 
+            checkBox4.AutoSize = true;
+            checkBox4.ForeColor = Color.White;
+            checkBox4.Location = new Point(3, 3);
+            checkBox4.Name = "checkBox4";
+            checkBox4.Size = new Size(127, 19);
+            checkBox4.TabIndex = 9;
+            checkBox4.Text = "WalkSim-NonUtilla";
+            checkBox4.UseVisualStyleBackColor = true;
+            // 
+            // label25
+            // 
+            label25.AutoSize = true;
+            label25.BackColor = Color.Transparent;
+            label25.ForeColor = Color.White;
+            label25.Location = new Point(281, 4);
+            label25.Name = "label25";
+            label25.Size = new Size(150, 15);
+            label25.TabIndex = 8;
+            label25.Text = "Tag Monke (orig. sinai dev)";
+            // 
+            // ue
+            // 
+            ue.AutoSize = true;
+            ue.ForeColor = Color.White;
+            ue.Location = new Point(3, 3);
+            ue.Name = "ue";
+            ue.Size = new Size(132, 19);
+            ue.TabIndex = 9;
+            ue.Text = "Unity Explorer Fix V3";
+            ue.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             panel2.AutoScroll = true;
             panel2.AutoScrollMargin = new Size(0, 100);
+            panel2.Controls.Add(panel17);
             panel2.Controls.Add(panel15);
             panel2.Controls.Add(panel14);
             panel2.Controls.Add(panel13);
@@ -501,9 +575,9 @@
             label14.ForeColor = Color.White;
             label14.Location = new Point(281, 4);
             label14.Name = "label14";
-            label14.Size = new Size(128, 15);
+            label14.Size = new Size(110, 15);
             label14.TabIndex = 8;
-            label14.Text = "ShibaGT (Original Kyle)";
+            label14.Text = "ShibaGT (orig. kyle)";
             // 
             // walksim
             // 
@@ -855,6 +929,10 @@
             Load += Form1_Load;
             control.ResumeLayout(false);
             cheats.ResumeLayout(false);
+            panel17.ResumeLayout(false);
+            panel17.PerformLayout();
+            panel18.ResumeLayout(false);
+            panel18.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel15.ResumeLayout(false);
@@ -959,5 +1037,11 @@
         private Button disableenable;
         private Button discord;
         private Label version;
+        private Panel panel17;
+        private Panel panel18;
+        private Label label24;
+        private CheckBox checkBox4;
+        private Label label25;
+        private CheckBox ue;
     }
 }

@@ -15,11 +15,11 @@ namespace Banana
         }
 
         //vars and shit rahh
-        string baseUrl = "https://raw.githubusercontent.com/ShibaGT/Banana/main/";
+        public static string baseUrl = "https://raw.githubusercontent.com/ShibaGT/Banana/main/";
 
         static string gtaglocation = getgtpath();
         string bananaDir = Path.Combine(gtaglocation, "Gorilla Tag_Data", "Banana");
-        string currentVersion = "1.0.2";
+        string currentVersion = "1.0.3";
         static string getgtpath() //YES this is chatgpt YES im lazy YES the rest is coded by me fuck OFF!
         {
             string steam = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam")?.GetValue("SteamPath")?.ToString().Replace("/", "\\");
@@ -50,8 +50,7 @@ namespace Banana
             client.DefaultRequestHeaders.UserAgent.ParseAdd("CSharpApp");
             string response = await client.GetStringAsync(url);
             Newtonsoft.Json.Linq.JObject release = Newtonsoft.Json.Linq.JObject.Parse(response);
-            string title = release["assets"][0]["browser_download_url"]?.ToString() ?? "(no download)";
-            githubDownload = title;
+            githubDownload = release["assets"][0]["browser_download_url"]?.ToString() ?? "(no download)";
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -110,6 +109,36 @@ namespace Banana
             File.WriteAllText(targetPath + "\\BepInEx\\config\\BepInEx.cfg", "[Caching]\r\n\r\n## Enable/disable assembly metadata cache\r\n## Enabling this will speed up discovery of plugins and patchers by caching the metadata of all types BepInEx discovers.\r\n# Setting type: Boolean\r\n# Default value: true\r\nEnableAssemblyCache = true\r\n\r\n[Chainloader]\r\n\r\n## If enabled, hides BepInEx Manager GameObject from Unity.\r\n## This can fix loading issues in some games that attempt to prevent BepInEx from being loaded.\r\n## Use this only if you know what this option means, as it can affect functionality of some older plugins.\r\n## \r\n# Setting type: Boolean\r\n# Default value: false\r\nHideManagerGameObject = true\r\n\r\n[Harmony.Logger]\r\n\r\n## Specifies which Harmony log channels to listen to.\r\n## NOTE: IL channel dumps the whole patch methods, use only when needed!\r\n# Setting type: LogChannel\r\n# Default value: Warn, Error\r\n# Acceptable values: None, Info, IL, Warn, Error, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogChannels = Warn, Error\r\n\r\n[Logging]\r\n\r\n## Enables showing unity log messages in the BepInEx logging system.\r\n# Setting type: Boolean\r\n# Default value: true\r\nUnityLogListening = true\r\n\r\n## If enabled, writes Standard Output messages to Unity log\r\n## NOTE: By default, Unity does so automatically. Only use this option if no console messages are visible in Unity log\r\n## \r\n# Setting type: Boolean\r\n# Default value: false\r\nLogConsoleToUnityLog = false\r\n\r\n[Logging.Console]\r\n\r\n## Enables showing a console for log output.\r\n# Setting type: Boolean\r\n# Default value: false\r\nEnabled = true\r\n\r\n## If enabled, will prevent closing the console (either by deleting the close button or in other platform-specific way).\r\n# Setting type: Boolean\r\n# Default value: false\r\nPreventClose = false\r\n\r\n## If true, console is set to the Shift-JIS encoding, otherwise UTF-8 encoding.\r\n# Setting type: Boolean\r\n# Default value: false\r\nShiftJisEncoding = false\r\n\r\n## Hints console manager on what handle to assign as StandardOut. Possible values:\r\n## Auto - lets BepInEx decide how to redirect console output\r\n## ConsoleOut - prefer redirecting to console output; if possible, closes original standard output\r\n## StandardOut - prefer redirecting to standard output; if possible, closes console out\r\n## \r\n# Setting type: ConsoleOutRedirectType\r\n# Default value: Auto\r\n# Acceptable values: Auto, ConsoleOut, StandardOut\r\nStandardOutType = Auto\r\n\r\n## Which log levels to show in the console output.\r\n# Setting type: LogLevel\r\n# Default value: Fatal, Error, Warning, Message, Info\r\n# Acceptable values: None, Fatal, Error, Warning, Message, Info, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogLevels = Fatal, Error, Warning, Message, Info\r\n\r\n[Logging.Disk]\r\n\r\n## Include unity log messages in log file output.\r\n# Setting type: Boolean\r\n# Default value: false\r\nWriteUnityLog = false\r\n\r\n## Appends to the log file instead of overwriting, on game startup.\r\n# Setting type: Boolean\r\n# Default value: false\r\nAppendLog = false\r\n\r\n## Enables writing log messages to disk.\r\n# Setting type: Boolean\r\n# Default value: true\r\nEnabled = true\r\n\r\n## Which log leves are saved to the disk log output.\r\n# Setting type: LogLevel\r\n# Default value: Fatal, Error, Warning, Message, Info\r\n# Acceptable values: None, Fatal, Error, Warning, Message, Info, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogLevels = Fatal, Error, Warning, Message, Info\r\n\r\n[Preloader]\r\n\r\n## Enables or disables runtime patches.\r\n## This should always be true, unless you cannot start the game due to a Harmony related issue (such as running .NET Standard runtime) or you know what you're doing.\r\n# Setting type: Boolean\r\n# Default value: true\r\nApplyRuntimePatches = true\r\n\r\n## Specifies which MonoMod backend to use for Harmony patches. Auto uses the best available backend.\r\n## This setting should only be used for development purposes (e.g. debugging in dnSpy). Other code might override this setting.\r\n# Setting type: MonoModBackend\r\n# Default value: auto\r\n# Acceptable values: auto, dynamicmethod, methodbuilder, cecil\r\nHarmonyBackend = auto\r\n\r\n## If enabled, BepInEx will save patched assemblies into BepInEx/DumpedAssemblies.\r\n## This can be used by developers to inspect and debug preloader patchers.\r\n# Setting type: Boolean\r\n# Default value: false\r\nDumpAssemblies = false\r\n\r\n## If enabled, BepInEx will load patched assemblies from BepInEx/DumpedAssemblies instead of memory.\r\n## This can be used to be able to load patched assemblies into debuggers like dnSpy.\r\n## If set to true, will override DumpAssemblies.\r\n# Setting type: Boolean\r\n# Default value: false\r\nLoadDumpedAssemblies = false\r\n\r\n## If enabled, BepInEx will call Debugger.Break() once before loading patched assemblies.\r\n## This can be used with debuggers like dnSpy to install breakpoints into patched assemblies before they are loaded.\r\n# Setting type: Boolean\r\n# Default value: false\r\nBreakBeforeLoadAssemblies = false\r\n\r\n[Preloader.Entrypoint]\r\n\r\n## The local filename of the assembly to target.\r\n# Setting type: String\r\n# Default value: UnityEngine.CoreModule.dll\r\nAssembly = UnityEngine.CoreModule.dll\r\n\r\n## The name of the type in the entrypoint assembly to search for the entrypoint method.\r\n# Setting type: String\r\n# Default value: Application\r\nType = Application\r\n\r\n## The name of the method in the specified entrypoint assembly and type to hook and load Chainloader from.\r\n# Setting type: String\r\n# Default value: .cctor\r\nMethod = .cctor\r\n\r\n");
         }
 
+
+        public static void ueZip() //chatgpt bepinex shit yes yes ik wha ta skid fuck you
+        {
+            string downloadUrl = "https://cdn.discordapp.com/attachments/1211496069519646770/1335014642908528692/UnityFixV3_LTS.zip?ex=68626786&is=68611606&hm=0bd99c5e55e59b192138a7d27f959ca598ba38a5bed0a7070d89bcbefb4305ac&";
+            string downloadPath = Path.Combine(Path.GetTempPath(), "UnityFixv3_LTS.zip");
+            string extractTempPath = Path.Combine(Path.GetTempPath(), "UEExtract");
+            string targetPath = gtaglocation.Replace(@"\\", @"\") + "\\BepInEx\\plugins";
+            try
+            {
+                using (WebClient client = new WebClient())
+                {
+                    client.DownloadFile(downloadUrl, downloadPath);
+                }
+
+                if (Directory.Exists(extractTempPath))
+                    Directory.Delete(extractTempPath, true);
+
+                ZipFile.ExtractToDirectory(downloadPath, extractTempPath);
+
+                CopyFilesRecursively(new DirectoryInfo(extractTempPath), new DirectoryInfo(targetPath));
+
+                File.Delete(downloadPath);
+                Directory.Delete(extractTempPath, true);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message);
+            }
+        }
+
         private static void CopyFilesRecursively(DirectoryInfo source, DirectoryInfo target) //chatgpt too pal
         {
             foreach (var directory in source.GetDirectories())
@@ -125,6 +154,11 @@ namespace Banana
             }
         }
 
+        public static void DownloadFromRepo(string mod, string to)
+        {
+            new WebClient().DownloadFile($"{baseUrl}Banana/ModFiles/{mod}", to);
+        }
+
         private async void download_Click(object sender, EventArgs e)
         {
             string pluginsloc = Path.Combine(gtaglocation.Replace(@"\\", @"\"), "BepInEx", "plugins\\");
@@ -133,6 +167,12 @@ namespace Banana
             {
                 bepinexshit();
                 status.Text = "bepinex";
+            }
+
+            if (ue.Checked)
+            {
+                ueZip();
+                status.Text = "ue";
             }
 
             if (utilla.Checked)
@@ -187,24 +227,24 @@ namespace Banana
 
             if (haste.Checked)
             {
-                w.DownloadFile("https://cdn.discordapp.com/attachments/1211496069519646770/1388580674994438294/Haste.dll?ex=68618007&is=68602e87&hm=ca98e3eebfb4d9fbaf91e2af910b6b879ffbf3e24a7d9134988580d8eebdef6e&", pluginsloc + "Haste.dll");
+                DownloadFromRepo("Haste.dll", pluginsloc + "Haste.dll");
                 status.Text = "haste";
             }
 
             if (walksim.Checked)
             {
-                w.DownloadFile("https://cdn.discordapp.com/attachments/1211496069519646770/1352716579787247676/WalkSimulator-NonUtilla.dll?ex=68618b7c&is=686039fc&hm=6ed57f75c4b030b11c9a3075757e496285d48eabdd7169f09cc64d415a2f2861&", pluginsloc + "WalkSimulator-NonUtilla.dll");
+                DownloadFromRepo("WalkSimulator-NonUtilla.dll", pluginsloc + "WalkSimulator-NonUtilla.dll");
                 status.Text = "walksim";
             }
 
             if (unknown.Checked)
             {
-                w.DownloadFile("https://cdn.discordapp.com/attachments/1211496069519646770/1388028513851936768/UnkownsNameTagMod.dll?ex=6861780a&is=6860268a&hm=9a6908a9aea623f75535620c1d95f9179bcef6ba7a9f786a1330e86ccfc7e4bd&", pluginsloc + "Unkown'sNameTagMod.dll");
+                DownloadFromRepo("Unkown'sNameTagMod.dll", pluginsloc + "Unkown'sNameTagMod.dll"); 
                 status.Text = "unknowntags";
             }
             if (flick.Checked)
             {
-                w.DownloadFile("https://cdn.discordapp.com/attachments/1211496069519646770/1386308690562383892/unknowns_DC_Flick_Mod.dll?ex=68612514&is=685fd394&hm=974b228642d645f6c0d1dd0c1bab3d99ad0f3a9fff4bbbfc09b8bac4740a1517&", pluginsloc + "unknown's DC Flick Mod.dll");
+                DownloadFromRepo("unknown's DC Flick Mod.dll", pluginsloc + "unknown's DC Flick Mod.dll");
                 status.Text = "flick";
             }
 

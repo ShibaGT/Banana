@@ -364,13 +364,8 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 /Banana/.vs
 /Banana/.vs/Banana
-/Banana/.vs/ProjectEvaluation
-/Banana/.vs/Banana/CopilotIndices
-/Banana/.vs/Banana/CopilotIndices/0.2.1653.9816
+/Banana/.vs/Banana/DesignTimeBuild
 /Banana/.vs/Banana/v17
-/BananaBoot/.vs
-/BananaBoot/.vs/BananaBoot
-/BananaBoot/.vs/ProjectEvaluation
-/BananaBoot/.vs/BananaBoot/CopilotIndices
-/BananaBoot/.vs/BananaBoot/CopilotIndices/0.2.1653.9816
-/BananaBoot/.vs/BananaBoot/v17
+/Banana/Banana/bin
+/Banana/Banana/obj
+/Banana/Banana/obj/Release/net8.0-windows
