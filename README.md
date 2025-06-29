@@ -25,3 +25,4 @@ Whether you're a casual player or a mod creator, Banana makes it easy to stay ah
 ### 📥 Download
 
 [Download Here!](https://github.com/ShibaGT/Banana/releases/latest/download/Banana.exe)
+Note: This auto updates! you only need to download this ONCE unless I change something drastic.

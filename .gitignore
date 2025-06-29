@@ -3,6 +3,17 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+/Banana/.vs
+/Banana/.vs/Banana
+/Banana/.vs/Banana/DesignTimeBuild
+/Banana/.vs/Banana/v17
+/Banana/Banana/bin
+/Banana/Banana/obj
+/Banana/Banana/obj/Release/net8.0-windows
+/Banana/.vs/Banana/CopilotIndices
+/Banana/.vs/Banana/CopilotIndices/17.14.734.62261
+
+
 # User-specific files
 *.rsuser
 *.suo
@@ -362,12 +373,3 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
-/Banana/.vs
-/Banana/.vs/Banana
-/Banana/.vs/Banana/DesignTimeBuild
-/Banana/.vs/Banana/v17
-/Banana/Banana/bin
-/Banana/Banana/obj
-/Banana/Banana/obj/Release/net8.0-windows
-/Banana/.vs/Banana/CopilotIndices
-/Banana/.vs/Banana/CopilotIndices/17.14.734.62261
