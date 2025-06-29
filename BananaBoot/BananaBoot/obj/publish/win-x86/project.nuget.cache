@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hua+KSnfTPM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kevin\\Documents\\GitHub\\Banana\\BananaBoot\\BananaBoot\\BananaBoot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.16\\microsoft.net.illink.tasks.8.0.16.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\8.0.16\\microsoft.netcore.app.runtime.win-x86.8.0.16.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\8.0.16\\microsoft.windowsdesktop.app.runtime.win-x86.8.0.16.nupkg.sha512",
+    "C:\\Users\\kevin\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\8.0.16\\microsoft.aspnetcore.app.runtime.win-x86.8.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
