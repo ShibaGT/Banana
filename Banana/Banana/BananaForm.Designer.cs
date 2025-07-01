@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Banana));
             control = new TabControl();
             cheats = new TabPage();
+            panel2 = new Panel();
             panel17 = new Panel();
             panel18 = new Panel();
             label24 = new Label();
             checkBox4 = new CheckBox();
             label25 = new Label();
             ue = new CheckBox();
-            panel2 = new Panel();
             panel15 = new Panel();
             panel16 = new Panel();
             label22 = new Label();
@@ -101,9 +101,9 @@
             version = new Label();
             control.SuspendLayout();
             cheats.SuspendLayout();
+            panel2.SuspendLayout();
             panel17.SuspendLayout();
             panel18.SuspendLayout();
-            panel2.SuspendLayout();
             panel15.SuspendLayout();
             panel16.SuspendLayout();
             panel14.SuspendLayout();
@@ -142,6 +142,32 @@
             cheats.Size = new Size(492, 231);
             cheats.TabIndex = 0;
             cheats.Text = "Cheats";
+            // 
+            // panel2
+            // 
+            panel2.AutoScroll = true;
+            panel2.AutoScrollMargin = new Size(0, 100);
+            panel2.Controls.Add(panel17);
+            panel2.Controls.Add(panel15);
+            panel2.Controls.Add(panel14);
+            panel2.Controls.Add(panel13);
+            panel2.Controls.Add(panel12);
+            panel2.Controls.Add(panel11);
+            panel2.Controls.Add(panel10);
+            panel2.Controls.Add(panel8);
+            panel2.Controls.Add(panel6);
+            panel2.Controls.Add(label12);
+            panel2.Controls.Add(label11);
+            panel2.Controls.Add(panel5);
+            panel2.Controls.Add(panel4);
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(panel3);
+            panel2.Controls.Add(panel1);
+            panel2.Controls.Add(label5);
+            panel2.Location = new Point(6, 0);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(490, 231);
+            panel2.TabIndex = 11;
             // 
             // panel17
             // 
@@ -207,32 +233,6 @@
             ue.TabIndex = 9;
             ue.Text = "Unity Explorer Fix V3";
             ue.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            panel2.AutoScroll = true;
-            panel2.AutoScrollMargin = new Size(0, 100);
-            panel2.Controls.Add(panel17);
-            panel2.Controls.Add(panel15);
-            panel2.Controls.Add(panel14);
-            panel2.Controls.Add(panel13);
-            panel2.Controls.Add(panel12);
-            panel2.Controls.Add(panel11);
-            panel2.Controls.Add(panel10);
-            panel2.Controls.Add(panel8);
-            panel2.Controls.Add(panel6);
-            panel2.Controls.Add(label12);
-            panel2.Controls.Add(label11);
-            panel2.Controls.Add(panel5);
-            panel2.Controls.Add(panel4);
-            panel2.Controls.Add(label8);
-            panel2.Controls.Add(panel3);
-            panel2.Controls.Add(panel1);
-            panel2.Controls.Add(label5);
-            panel2.Location = new Point(6, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(490, 231);
-            panel2.TabIndex = 11;
             // 
             // panel15
             // 
@@ -458,7 +458,6 @@
             unknown.TabIndex = 9;
             unknown.Text = "Unknowns Nametag Mod (F7 TO OPEN GUI)";
             unknown.UseVisualStyleBackColor = true;
-            unknown.CheckedChanged += checkBox1_CheckedChanged;
             // 
             // panel8
             // 
@@ -675,7 +674,6 @@
             iidk.TabIndex = 9;
             iidk.Text = "ii's Stupid Menu";
             iidk.UseVisualStyleBackColor = true;
-            iidk.CheckedChanged += iidk_CheckedChanged;
             // 
             // label8
             // 
@@ -900,7 +898,7 @@
             version.Name = "version";
             version.Size = new Size(117, 15);
             version.TabIndex = 10;
-            version.Text = "Banana Version: 1.0.1";
+            version.Text = "Banana Version: 1.0.4";
             // 
             // Banana
             // 
@@ -929,12 +927,12 @@
             Load += Form1_Load;
             control.ResumeLayout(false);
             cheats.ResumeLayout(false);
+            panel2.ResumeLayout(false);
+            panel2.PerformLayout();
             panel17.ResumeLayout(false);
             panel17.PerformLayout();
             panel18.ResumeLayout(false);
             panel18.PerformLayout();
-            panel2.ResumeLayout(false);
-            panel2.PerformLayout();
             panel15.ResumeLayout(false);
             panel15.PerformLayout();
             panel16.ResumeLayout(false);

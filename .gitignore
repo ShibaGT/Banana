@@ -373,3 +373,7 @@ MigrationBackup/
 .ionide/
 
 # Fody - auto-generated XML schema
+/Banana/Banana/obj/Debug
+/Banana/Banana/obj/Debug
+/Banana/Banana/obj/Debug/net8.0-windows/win-x86
+/Banana/Banana/obj/Debug/net8.0-windows

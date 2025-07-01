@@ -19,7 +19,7 @@ namespace Banana
 
         static string gtaglocation = getgtpath();
         string bananaDir = Path.Combine(gtaglocation, "Gorilla Tag_Data", "Banana");
-        string currentVersion = "1.0.3";
+        string currentVersion = "1.0.4";
         static string getgtpath() //YES this is chatgpt YES im lazy YES the rest is coded by me fuck OFF!
         {
             string steam = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam")?.GetValue("SteamPath")?.ToString().Replace("/", "\\");
@@ -112,8 +112,8 @@ namespace Banana
 
         public static void ueZip() //chatgpt bepinex shit yes yes ik wha ta skid fuck you
         {
-            string downloadUrl = "https://cdn.discordapp.com/attachments/1211496069519646770/1335014642908528692/UnityFixV3_LTS.zip?ex=68626786&is=68611606&hm=0bd99c5e55e59b192138a7d27f959ca598ba38a5bed0a7070d89bcbefb4305ac&";
-            string downloadPath = Path.Combine(Path.GetTempPath(), "UnityFixv3_LTS.zip");
+            string downloadUrl = $"{baseUrl}Banana/ModFiles/UnityFixV3_LTS.zip";
+            string downloadPath = Path.Combine(Path.GetTempPath(), "UnityFixV3_LTS.zip");
             string extractTempPath = Path.Combine(Path.GetTempPath(), "UEExtract");
             string targetPath = gtaglocation.Replace(@"\\", @"\") + "\\BepInEx\\plugins";
             try
@@ -194,12 +194,6 @@ namespace Banana
                 w.DownloadFile(githubDownload, pluginsloc + "Sodium.dll");
                 status.Text = "sodium";
             }
-            if (sodium.Checked)
-            {
-                await GetDownloadFromGithub("TAGMONKE/Sodium");
-                w.DownloadFile(githubDownload, pluginsloc + "Sodium.dll");
-                status.Text = "sodium";
-            }
             if (forpreds.Checked)
             {
                 await GetDownloadFromGithub("iiDk-the-actual/ForeverPreds");
@@ -249,15 +243,6 @@ namespace Banana
             }
 
             MessageBox.Show("Finished installing mods!");
-        }
-
-        private async void iidk_CheckedChanged(object sender, EventArgs e)
-        {
-        }
-
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void disableenable_Click(object sender, EventArgs e)
