@@ -19,7 +19,7 @@ namespace Banana
 
         static string gtaglocation = getgtpath();
         string bananaDir = Path.Combine(gtaglocation, "Gorilla Tag_Data", "Banana");
-        string currentVersion = "1.0.4";
+        string currentVersion = "1.0.5";
         static string getgtpath() //YES this is chatgpt YES im lazy YES the rest is coded by me fuck OFF!
         {
             string steam = Registry.CurrentUser.OpenSubKey(@"Software\Valve\Steam")?.GetValue("SteamPath")?.ToString().Replace("/", "\\");
@@ -41,6 +41,7 @@ namespace Banana
         WebClient w = new WebClient();
 
         string githubDownload;
+        string githubVersion;
 
         private async Task GetDownloadFromGithub(string repo)
         {
@@ -53,6 +54,17 @@ namespace Banana
             githubDownload = release["assets"][0]["browser_download_url"]?.ToString() ?? "(no download)";
         }
 
+        private async Task GetVersionFromGithub(string repo)
+        {
+            //iiDk-the-actual/iis.Stupid.Menu example dingus
+            string url = $"https://api.github.com/repos/{repo}/releases/latest";
+            using HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.UserAgent.ParseAdd("CSharpApp");
+            string response = await client.GetStringAsync(url);
+            Newtonsoft.Json.Linq.JObject release = Newtonsoft.Json.Linq.JObject.Parse(response);
+            githubVersion = release["tag_name"]?.ToString() ?? "(no download)";
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
             string versionPath = Path.Combine(bananaDir, "banana_version.txt");
@@ -63,6 +75,7 @@ namespace Banana
             status.Text = "init path";
 
             disableenableupdate();
+            UpdateVersions();
         }
 
         private void game_Click(object sender, EventArgs e)
@@ -105,8 +118,8 @@ namespace Banana
                 MessageBox.Show("An error occurred: " + ex.Message);
             }
             Directory.CreateDirectory(targetPath + "\\BepInEx\\plugins");
-
-            File.WriteAllText(targetPath + "\\BepInEx\\config\\BepInEx.cfg", "[Caching]\r\n\r\n## Enable/disable assembly metadata cache\r\n## Enabling this will speed up discovery of plugins and patchers by caching the metadata of all types BepInEx discovers.\r\n# Setting type: Boolean\r\n# Default value: true\r\nEnableAssemblyCache = true\r\n\r\n[Chainloader]\r\n\r\n## If enabled, hides BepInEx Manager GameObject from Unity.\r\n## This can fix loading issues in some games that attempt to prevent BepInEx from being loaded.\r\n## Use this only if you know what this option means, as it can affect functionality of some older plugins.\r\n## \r\n# Setting type: Boolean\r\n# Default value: false\r\nHideManagerGameObject = true\r\n\r\n[Harmony.Logger]\r\n\r\n## Specifies which Harmony log channels to listen to.\r\n## NOTE: IL channel dumps the whole patch methods, use only when needed!\r\n# Setting type: LogChannel\r\n# Default value: Warn, Error\r\n# Acceptable values: None, Info, IL, Warn, Error, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogChannels = Warn, Error\r\n\r\n[Logging]\r\n\r\n## Enables showing unity log messages in the BepInEx logging system.\r\n# Setting type: Boolean\r\n# Default value: true\r\nUnityLogListening = true\r\n\r\n## If enabled, writes Standard Output messages to Unity log\r\n## NOTE: By default, Unity does so automatically. Only use this option if no console messages are visible in Unity log\r\n## \r\n# Setting type: Boolean\r\n# Default value: false\r\nLogConsoleToUnityLog = false\r\n\r\n[Logging.Console]\r\n\r\n## Enables showing a console for log output.\r\n# Setting type: Boolean\r\n# Default value: false\r\nEnabled = true\r\n\r\n## If enabled, will prevent closing the console (either by deleting the close button or in other platform-specific way).\r\n# Setting type: Boolean\r\n# Default value: false\r\nPreventClose = false\r\n\r\n## If true, console is set to the Shift-JIS encoding, otherwise UTF-8 encoding.\r\n# Setting type: Boolean\r\n# Default value: false\r\nShiftJisEncoding = false\r\n\r\n## Hints console manager on what handle to assign as StandardOut. Possible values:\r\n## Auto - lets BepInEx decide how to redirect console output\r\n## ConsoleOut - prefer redirecting to console output; if possible, closes original standard output\r\n## StandardOut - prefer redirecting to standard output; if possible, closes console out\r\n## \r\n# Setting type: ConsoleOutRedirectType\r\n# Default value: Auto\r\n# Acceptable values: Auto, ConsoleOut, StandardOut\r\nStandardOutType = Auto\r\n\r\n## Which log levels to show in the console output.\r\n# Setting type: LogLevel\r\n# Default value: Fatal, Error, Warning, Message, Info\r\n# Acceptable values: None, Fatal, Error, Warning, Message, Info, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogLevels = Fatal, Error, Warning, Message, Info\r\n\r\n[Logging.Disk]\r\n\r\n## Include unity log messages in log file output.\r\n# Setting type: Boolean\r\n# Default value: false\r\nWriteUnityLog = false\r\n\r\n## Appends to the log file instead of overwriting, on game startup.\r\n# Setting type: Boolean\r\n# Default value: false\r\nAppendLog = false\r\n\r\n## Enables writing log messages to disk.\r\n# Setting type: Boolean\r\n# Default value: true\r\nEnabled = true\r\n\r\n## Which log leves are saved to the disk log output.\r\n# Setting type: LogLevel\r\n# Default value: Fatal, Error, Warning, Message, Info\r\n# Acceptable values: None, Fatal, Error, Warning, Message, Info, Debug, All\r\n# Multiple values can be set at the same time by separating them with , (e.g. Debug, Warning)\r\nLogLevels = Fatal, Error, Warning, Message, Info\r\n\r\n[Preloader]\r\n\r\n## Enables or disables runtime patches.\r\n## This should always be true, unless you cannot start the game due to a Harmony related issue (such as running .NET Standard runtime) or you know what you're doing.\r\n# Setting type: Boolean\r\n# Default value: true\r\nApplyRuntimePatches = true\r\n\r\n## Specifies which MonoMod backend to use for Harmony patches. Auto uses the best available backend.\r\n## This setting should only be used for development purposes (e.g. debugging in dnSpy). Other code might override this setting.\r\n# Setting type: MonoModBackend\r\n# Default value: auto\r\n# Acceptable values: auto, dynamicmethod, methodbuilder, cecil\r\nHarmonyBackend = auto\r\n\r\n## If enabled, BepInEx will save patched assemblies into BepInEx/DumpedAssemblies.\r\n## This can be used by developers to inspect and debug preloader patchers.\r\n# Setting type: Boolean\r\n# Default value: false\r\nDumpAssemblies = false\r\n\r\n## If enabled, BepInEx will load patched assemblies from BepInEx/DumpedAssemblies instead of memory.\r\n## This can be used to be able to load patched assemblies into debuggers like dnSpy.\r\n## If set to true, will override DumpAssemblies.\r\n# Setting type: Boolean\r\n# Default value: false\r\nLoadDumpedAssemblies = false\r\n\r\n## If enabled, BepInEx will call Debugger.Break() once before loading patched assemblies.\r\n## This can be used with debuggers like dnSpy to install breakpoints into patched assemblies before they are loaded.\r\n# Setting type: Boolean\r\n# Default value: false\r\nBreakBeforeLoadAssemblies = false\r\n\r\n[Preloader.Entrypoint]\r\n\r\n## The local filename of the assembly to target.\r\n# Setting type: String\r\n# Default value: UnityEngine.CoreModule.dll\r\nAssembly = UnityEngine.CoreModule.dll\r\n\r\n## The name of the type in the entrypoint assembly to search for the entrypoint method.\r\n# Setting type: String\r\n# Default value: Application\r\nType = Application\r\n\r\n## The name of the method in the specified entrypoint assembly and type to hook and load Chainloader from.\r\n# Setting type: String\r\n# Default value: .cctor\r\nMethod = .cctor\r\n\r\n");
+            using (WebClient client = new WebClient())
+                File.WriteAllText(targetPath + "\\BepInEx\\config\\BepInEx.cfg", client.DownloadString($"{baseUrl}config.txt"));
         }
 
 
@@ -159,91 +172,91 @@ namespace Banana
             new WebClient().DownloadFile($"{baseUrl}Banana/ModFiles/{mod}", to);
         }
 
+        public (CheckBox checkBox, string repo, string outputFile, string statusText, Label versionlabel)[] githubMods
+        {
+            get
+            {
+                return new (CheckBox checkBox, string repo, string outputFile, string statusText, Label versionlabel)[]
+                {
+                       (utilla, "iiDk-the-actual/Utilla-Public", "Utilla.dll", "utilla", utillav),
+                       (iidk, "iiDk-the-actual/iis.Stupid.Menu", "iis Stupid Menu.dll", "iidk menu sigma", iiv),
+                       (sodium, "TAGMONKE/Sodium", "Sodium.dll", "sodium", sodiumv),
+                       (forpreds, "iiDk-the-actual/ForeverPreds", "ForeverPreds.dll", "forever preds", predv),
+                       (forhz, "iiDk-the-actual/ForeverHz", "ForeverHz.dll", "hz mod", hzv),
+                       (cosm, "iiDk-the-actual/ForeverCosmetx", "ForeverCosmetx.dll", "cosmetx", cosmetxv),
+                       (media, "iiDk-the-actual/GorillaMedia", "GorillaMedia.dll", "media", mediav)
+                };
+            }
+        }
+
+        public (CheckBox checkBox, string fileName, string statusText)[] discordMods
+        {
+            get
+            {
+                return new (CheckBox checkBox, string fileName, string statusText)[]
+                {
+                    (haste, "Haste.dll", "haste"),
+                    (walksim, "WalkSimulator-NonUtilla.dll", "walksim"),
+                    (unknown, "Unkown'sNameTagMod.dll", "unknowntags"),
+                    (flick, "unknown's DC Flick Mod.dll", "flick")
+                };
+            }
+        }
+
+        public async void UpdateVersions()
+        {
+            foreach (var (checkBox, repo, outputFile, statusText, versionlabel) in githubMods)
+            {
+                await GetVersionFromGithub(repo);
+                versionlabel.Text = githubVersion;
+            }
+        }
+
         private async void download_Click(object sender, EventArgs e)
         {
             string pluginsloc = Path.Combine(gtaglocation.Replace(@"\\", @"\"), "BepInEx", "plugins\\");
+            try
+            {
 
-            if (bepinex.Checked)
-            {
-                bepinexshit();
-                status.Text = "bepinex";
-            }
+                if (bepinex.Checked)
+                {
+                    bepinexshit();
+                    status.Text = "bepinex";
+                }
 
-            if (ue.Checked)
-            {
-                ueZip();
-                status.Text = "ue";
-            }
+                if (ue.Checked)
+                {
+                    ueZip();
+                    status.Text = "ue";
+                }
 
-            if (utilla.Checked)
-            {
-                await GetDownloadFromGithub("iiDk-the-actual/Utilla-Public");
-                w.DownloadFile(githubDownload, pluginsloc + "Utilla.dll");
-                status.Text = "utilla";
-            }
+                foreach (var (checkBox, repo, outputFile, statusText, versionlabel) in githubMods)
+                {
+                    if (checkBox.Checked)
+                    {
+                        await GetDownloadFromGithub(repo);
+                        w.DownloadFile(githubDownload, Path.Combine(pluginsloc, outputFile));
+                        status.Text = statusText;
+                    }
+                }
 
-            if (iidk.Checked)
-            {
-                await GetDownloadFromGithub("iiDk-the-actual/iis.Stupid.Menu");
-                w.DownloadFile(githubDownload, pluginsloc + "iis Stupid Menu.dll");
-                status.Text = "iidk menu sigma";
-            }
-            if (sodium.Checked)
-            {
-                await GetDownloadFromGithub("TAGMONKE/Sodium");
-                w.DownloadFile(githubDownload, pluginsloc + "Sodium.dll");
-                status.Text = "sodium";
-            }
-            if (forpreds.Checked)
-            {
-                await GetDownloadFromGithub("iiDk-the-actual/ForeverPreds");
-                w.DownloadFile(githubDownload, pluginsloc + "ForeverPreds.dll");
-                status.Text = "forever preds";
-            }
-            if (forhz.Checked)
-            {
-                await GetDownloadFromGithub("iiDk-the-actual/ForeverHz");
-                w.DownloadFile(githubDownload, pluginsloc + "ForeverHz.dll");
-                status.Text = "hz mod";
-            }
-            if (cosm.Checked)
-            {
-                await GetDownloadFromGithub("iiDk-the-actual/ForeverCosmetx");
-                w.DownloadFile(githubDownload, pluginsloc + "ForeverCosmetx.dll");
-                status.Text = "cosmetx";
-            }
-            if (media.Checked)
-            {
-                await GetDownloadFromGithub("iiDk-the-actual/GorillaMedia");
-                w.DownloadFile(githubDownload, pluginsloc + "GorillaMedia.dll");
-                status.Text = "media";
-            }
+                foreach (var (checkBox, fileName, statusText) in discordMods)
+                {
+                    if (checkBox.Checked)
+                    {
+                        DownloadFromRepo(fileName, Path.Combine(pluginsloc, fileName));
+                        status.Text = statusText;
+                    }
+                }
 
-            if (haste.Checked)
-            {
-                DownloadFromRepo("Haste.dll", pluginsloc + "Haste.dll");
-                status.Text = "haste";
+                MessageBox.Show("Finished installing mods!");
             }
-
-            if (walksim.Checked)
+            catch
             {
-                DownloadFromRepo("WalkSimulator-NonUtilla.dll", pluginsloc + "WalkSimulator-NonUtilla.dll");
-                status.Text = "walksim";
+                MessageBox.Show("An error occurred while installing mods. Please check your Gorilla Tag directory and try again.");
             }
-
-            if (unknown.Checked)
-            {
-                DownloadFromRepo("Unkown'sNameTagMod.dll", pluginsloc + "Unkown'sNameTagMod.dll"); 
-                status.Text = "unknowntags";
-            }
-            if (flick.Checked)
-            {
-                DownloadFromRepo("unknown's DC Flick Mod.dll", pluginsloc + "unknown's DC Flick Mod.dll");
-                status.Text = "flick";
-            }
-
-            MessageBox.Show("Finished installing mods!");
         }
+
 
         private void disableenable_Click(object sender, EventArgs e)
         {
@@ -277,6 +290,24 @@ namespace Banana
                 Verb = "open"
             };
             Process.Start(ps);
+        }
+
+        private void changelocation_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                folderDialog.Description = "Select your Gorilla Tag directory.";
+                folderDialog.ShowNewFolderButton = true;
+
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string selectedPath = folderDialog.SelectedPath;
+                    MessageBox.Show("Selected Folder: " + selectedPath);
+                    // You can also set this to a TextBox or use it in your code
+                    label1.Text = selectedPath;
+                    gtaglocation = selectedPath;
+                }
+            }
         }
     }
 }

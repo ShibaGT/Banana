@@ -1,5 +1,5 @@
 # 🍌 Banana Mod Manager
-
+![Banana Mod Manager Banner](banana.png)
 **A modern, community-first mod manager for Gorilla Tag.**
 Discord: https://discord.gg/NtgqZkwuPy
 

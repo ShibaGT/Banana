@@ -39,18 +39,22 @@
             label25 = new Label();
             ue = new CheckBox();
             panel15 = new Panel();
+            mediav = new Label();
             panel16 = new Panel();
             label22 = new Label();
             checkBox1 = new CheckBox();
             label23 = new Label();
             media = new CheckBox();
             panel14 = new Panel();
+            hzv = new Label();
             label21 = new Label();
             forhz = new CheckBox();
             panel13 = new Panel();
+            cosmetxv = new Label();
             label20 = new Label();
             cosm = new CheckBox();
             panel12 = new Panel();
+            predv = new Label();
             label19 = new Label();
             forpreds = new CheckBox();
             panel11 = new Panel();
@@ -60,12 +64,14 @@
             label17 = new Label();
             unknown = new CheckBox();
             panel8 = new Panel();
+            sodiumv = new Label();
             panel9 = new Panel();
             label15 = new Label();
             checkBox3 = new CheckBox();
             label16 = new Label();
             sodium = new CheckBox();
             panel6 = new Panel();
+            walkv = new Label();
             panel7 = new Panel();
             label13 = new Label();
             checkBox2 = new CheckBox();
@@ -74,13 +80,16 @@
             label12 = new Label();
             label11 = new Label();
             panel5 = new Panel();
+            hastev = new Label();
             label10 = new Label();
             haste = new CheckBox();
             panel4 = new Panel();
+            iiv = new Label();
             label9 = new Label();
             iidk = new CheckBox();
             label8 = new Label();
             panel3 = new Panel();
+            utillav = new Label();
             label7 = new Label();
             utilla = new CheckBox();
             panel1 = new Panel();
@@ -99,6 +108,7 @@
             disableenable = new Button();
             discord = new Button();
             version = new Label();
+            changelocation = new Button();
             control.SuspendLayout();
             cheats.SuspendLayout();
             panel2.SuspendLayout();
@@ -237,6 +247,7 @@
             // panel15
             // 
             panel15.BackColor = Color.FromArgb(32, 32, 32);
+            panel15.Controls.Add(mediav);
             panel15.Controls.Add(panel16);
             panel15.Controls.Add(label23);
             panel15.Controls.Add(media);
@@ -244,6 +255,17 @@
             panel15.Name = "panel15";
             panel15.Size = new Size(470, 23);
             panel15.TabIndex = 17;
+            // 
+            // mediav
+            // 
+            mediav.AutoSize = true;
+            mediav.BackColor = Color.Transparent;
+            mediav.ForeColor = Color.White;
+            mediav.Location = new Point(397, 4);
+            mediav.Name = "mediav";
+            mediav.Size = new Size(45, 15);
+            mediav.TabIndex = 20;
+            mediav.Text = "version";
             // 
             // panel16
             // 
@@ -302,12 +324,24 @@
             // panel14
             // 
             panel14.BackColor = Color.FromArgb(32, 32, 32);
+            panel14.Controls.Add(hzv);
             panel14.Controls.Add(label21);
             panel14.Controls.Add(forhz);
             panel14.Location = new Point(0, 241);
             panel14.Name = "panel14";
             panel14.Size = new Size(470, 23);
             panel14.TabIndex = 18;
+            // 
+            // hzv
+            // 
+            hzv.AutoSize = true;
+            hzv.BackColor = Color.Transparent;
+            hzv.ForeColor = Color.White;
+            hzv.Location = new Point(361, 3);
+            hzv.Name = "hzv";
+            hzv.Size = new Size(45, 15);
+            hzv.TabIndex = 17;
+            hzv.Text = "version";
             // 
             // label21
             // 
@@ -334,12 +368,24 @@
             // panel13
             // 
             panel13.BackColor = Color.FromArgb(32, 32, 32);
+            panel13.Controls.Add(cosmetxv);
             panel13.Controls.Add(label20);
             panel13.Controls.Add(cosm);
             panel13.Location = new Point(0, 219);
             panel13.Name = "panel13";
             panel13.Size = new Size(470, 23);
             panel13.TabIndex = 17;
+            // 
+            // cosmetxv
+            // 
+            cosmetxv.AutoSize = true;
+            cosmetxv.BackColor = Color.Transparent;
+            cosmetxv.ForeColor = Color.White;
+            cosmetxv.Location = new Point(361, 4);
+            cosmetxv.Name = "cosmetxv";
+            cosmetxv.Size = new Size(45, 15);
+            cosmetxv.TabIndex = 16;
+            cosmetxv.Text = "version";
             // 
             // label20
             // 
@@ -366,12 +412,24 @@
             // panel12
             // 
             panel12.BackColor = Color.FromArgb(32, 32, 32);
+            panel12.Controls.Add(predv);
             panel12.Controls.Add(label19);
             panel12.Controls.Add(forpreds);
             panel12.Location = new Point(0, 197);
             panel12.Name = "panel12";
             panel12.Size = new Size(470, 23);
             panel12.TabIndex = 16;
+            // 
+            // predv
+            // 
+            predv.AutoSize = true;
+            predv.BackColor = Color.Transparent;
+            predv.ForeColor = Color.White;
+            predv.Location = new Point(361, 4);
+            predv.Name = "predv";
+            predv.Size = new Size(45, 15);
+            predv.TabIndex = 15;
+            predv.Text = "version";
             // 
             // label19
             // 
@@ -462,6 +520,7 @@
             // panel8
             // 
             panel8.BackColor = Color.FromArgb(32, 32, 32);
+            panel8.Controls.Add(sodiumv);
             panel8.Controls.Add(panel9);
             panel8.Controls.Add(label16);
             panel8.Controls.Add(sodium);
@@ -469,6 +528,17 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(470, 23);
             panel8.TabIndex = 16;
+            // 
+            // sodiumv
+            // 
+            sodiumv.AutoSize = true;
+            sodiumv.BackColor = Color.Transparent;
+            sodiumv.ForeColor = Color.White;
+            sodiumv.Location = new Point(397, 3);
+            sodiumv.Name = "sodiumv";
+            sodiumv.Size = new Size(45, 15);
+            sodiumv.TabIndex = 19;
+            sodiumv.Text = "version";
             // 
             // panel9
             // 
@@ -527,6 +597,7 @@
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(32, 32, 32);
+            panel6.Controls.Add(walkv);
             panel6.Controls.Add(panel7);
             panel6.Controls.Add(label14);
             panel6.Controls.Add(walksim);
@@ -534,6 +605,17 @@
             panel6.Name = "panel6";
             panel6.Size = new Size(470, 23);
             panel6.TabIndex = 14;
+            // 
+            // walkv
+            // 
+            walkv.AutoSize = true;
+            walkv.BackColor = Color.Transparent;
+            walkv.ForeColor = Color.White;
+            walkv.Location = new Point(397, 4);
+            walkv.Name = "walkv";
+            walkv.Size = new Size(45, 15);
+            walkv.TabIndex = 18;
+            walkv.Text = "version";
             // 
             // panel7
             // 
@@ -614,12 +696,24 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(32, 32, 32);
+            panel5.Controls.Add(hastev);
             panel5.Controls.Add(label10);
             panel5.Controls.Add(haste);
             panel5.Location = new Point(0, 110);
             panel5.Name = "panel5";
             panel5.Size = new Size(470, 23);
             panel5.TabIndex = 13;
+            // 
+            // hastev
+            // 
+            hastev.AutoSize = true;
+            hastev.BackColor = Color.Transparent;
+            hastev.ForeColor = Color.White;
+            hastev.Location = new Point(361, 4);
+            hastev.Name = "hastev";
+            hastev.Size = new Size(31, 15);
+            hastev.TabIndex = 12;
+            hastev.Text = "1.0.7";
             // 
             // label10
             // 
@@ -646,12 +740,24 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(32, 32, 32);
+            panel4.Controls.Add(iiv);
             panel4.Controls.Add(label9);
             panel4.Controls.Add(iidk);
             panel4.Location = new Point(0, 88);
             panel4.Name = "panel4";
             panel4.Size = new Size(470, 23);
             panel4.TabIndex = 12;
+            // 
+            // iiv
+            // 
+            iiv.AutoSize = true;
+            iiv.BackColor = Color.Transparent;
+            iiv.ForeColor = Color.White;
+            iiv.Location = new Point(361, 3);
+            iiv.Name = "iiv";
+            iiv.Size = new Size(45, 15);
+            iiv.TabIndex = 11;
+            iiv.Text = "version";
             // 
             // label9
             // 
@@ -689,12 +795,24 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(32, 32, 32);
+            panel3.Controls.Add(utillav);
             panel3.Controls.Add(label7);
             panel3.Controls.Add(utilla);
             panel3.Location = new Point(0, 44);
             panel3.Name = "panel3";
             panel3.Size = new Size(470, 23);
             panel3.TabIndex = 11;
+            // 
+            // utillav
+            // 
+            utillav.AutoSize = true;
+            utillav.BackColor = Color.Transparent;
+            utillav.ForeColor = Color.White;
+            utillav.Location = new Point(361, 3);
+            utillav.Name = "utillav";
+            utillav.Size = new Size(45, 15);
+            utillav.TabIndex = 10;
+            utillav.Text = "version";
             // 
             // label7
             // 
@@ -898,7 +1016,17 @@
             version.Name = "version";
             version.Size = new Size(117, 15);
             version.TabIndex = 10;
-            version.Text = "Banana Version: 1.0.4";
+            version.Text = "Banana Version: 1.0.5";
+            // 
+            // changelocation
+            // 
+            changelocation.Location = new Point(120, 3);
+            changelocation.Name = "changelocation";
+            changelocation.Size = new Size(26, 21);
+            changelocation.TabIndex = 11;
+            changelocation.Text = "..";
+            changelocation.UseVisualStyleBackColor = true;
+            changelocation.Click += changelocation_Click;
             // 
             // Banana
             // 
@@ -906,6 +1034,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(16, 16, 16);
             ClientSize = new Size(632, 323);
+            Controls.Add(changelocation);
             Controls.Add(version);
             Controls.Add(discord);
             Controls.Add(disableenable);
@@ -989,7 +1118,7 @@
         private Panel panel2;
         private Panel panel3;
         private Label label7;
-        private CheckBox utilla;
+        public CheckBox utilla;
         private Label label8;
         private Panel panel4;
         private Label label9;
@@ -1041,5 +1170,15 @@
         private CheckBox checkBox4;
         private Label label25;
         private CheckBox ue;
+        private Label hastev;
+        private Label iiv;
+        private Label utillav;
+        private Label mediav;
+        private Label hzv;
+        private Label cosmetxv;
+        private Label predv;
+        private Label sodiumv;
+        private Label walkv;
+        private Button changelocation;
     }
 }

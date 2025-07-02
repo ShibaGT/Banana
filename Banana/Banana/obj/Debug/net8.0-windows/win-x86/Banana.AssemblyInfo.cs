@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Banana")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+57db9c0efe3e7aa8cac9b64e28cddcd8bacf7c85")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32857b3cf0bd838a0cf309cc994272e128d3c708")]
 [assembly: System.Reflection.AssemblyProductAttribute("Banana")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Banana")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
