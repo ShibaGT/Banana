@@ -13,7 +13,7 @@ namespace Banana
 
         private string _gtagLocation = DetectGorillaTagPath();
         private string _bananaDir;
-        private readonly string _currentVersion = "1.1.9";
+        private readonly string _currentVersion = "1.2.0";
         string githubVersion;
 
         private static readonly HttpClient s_httpClient = new HttpClient();
@@ -276,12 +276,15 @@ namespace Banana
                        (pokruk, "iiDk-the-actual/iiCamMod", "iiCamMod.dll", "iicam", pokrukv),
                        (toomuchinfo, "iiDk-the-actual/TooMuchInfo", "TooMuchInfo.dll", "too much info", toomuchinfov),
                        (walksim, "iiDk-the-actual/WalkSim", "WalkSim.dll", "walksim", walksimv),
-                       (draw, "drowsiiii/MonkeDraw-Drawing-Pad", "MonkeDrawing.dll", "draw", drawv),
                        (zlothy, "ZlothY29IQ/Zlothy-Nametag", "ZlothYNametag.dll", "zlothy", zlothyv),
                        (shirts, "developer9998/GorillaShirts", "GorillaShirts.dll", "shirts", shirtsv),
                        (volume, "ZlothY29IQ/GorillaVolumeControls", "GorillaVolumeControls.dll", "volumecontrols", volumev),
                        (infolog, "CheemsPookieAlt/Gorilla-Info-Logger", "Gorilla.Info.Logger.dll", "info logger", infologv),
                        (whodis, "ShibaGT/WhoDis", "WhoDis.dll", "whodis", whodisv),
+                       (arss, "AutoReportSystem/ARS-Files", "ARS.dll", "ars", arsv),
+                       (noleaves, "helenskeleton/No-Leaves", "NoLeaves.dll", "no leaves", noleavesv),
+                       (casting, "hamburbur-org/Casting-Should-Be-Free", "CastingShouldBeFree.dll", "casting", castingv),
+                       (ham, "hamburbur-org/hamburbur", "hamburbur.dll", "hamburvur", hamv),
                 };
             }
         }
@@ -292,9 +295,7 @@ namespace Banana
             {
                 return new (CheckBox, string, string)[]
                 {
-                    (bans, "bannedservers.dll", "banservers"),
-                    (noleaves, "No Leaves.dll", "leaves !!!"),
-                    (arss, "AutoReportSystem.dll", "ars"),
+                    (draw, "Cosmetic Buyer.dll", "cosmetic buyer"),
                 };
             }
         }
@@ -324,7 +325,7 @@ namespace Banana
         {
             var pluginsLoc = Directory.Exists(Path.Combine(_gtagLocation, "BepInEx"))
                 ? Path.Combine(_gtagLocation, "BepInEx", "plugins")
-                : _gtagLocation; 
+                : _gtagLocation;
 
             try
             {
@@ -506,6 +507,11 @@ namespace Banana
             {
                 MessageBox.Show($"Unable to persist folder setting: {ex.Message}");
             }
+        }
+
+        private void infolog_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
     internal static class ControlExtensions

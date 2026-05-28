@@ -31,6 +31,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Banana));
             control = new TabControl();
             cheats = new TabPage();
+            panel19 = new Panel();
+            hamv = new Label();
+            label26 = new Label();
+            ham = new CheckBox();
             panel2 = new Panel();
             panel11 = new Panel();
             infologv = new Label();
@@ -47,6 +51,7 @@
             label41 = new Label();
             whodis = new CheckBox();
             panel29 = new Panel();
+            arsv = new Label();
             panel30 = new Panel();
             label37 = new Label();
             checkBox7 = new CheckBox();
@@ -65,7 +70,6 @@
             label34 = new Label();
             zlothy = new CheckBox();
             panel5 = new Panel();
-            drawv = new Label();
             panel24 = new Panel();
             label31 = new Label();
             checkBox6 = new CheckBox();
@@ -76,11 +80,13 @@
             label30 = new Label();
             pokruk = new CheckBox();
             panel22 = new Panel();
+            noleavesv = new Label();
             label28 = new Label();
             noleaves = new CheckBox();
             panel21 = new Panel();
+            castingv = new Label();
             label29 = new Label();
-            bans = new CheckBox();
+            casting = new CheckBox();
             panel8 = new Panel();
             librev = new Label();
             panel9 = new Panel();
@@ -155,6 +161,7 @@
             folders = new CheckBox();
             control.SuspendLayout();
             cheats.SuspendLayout();
+            panel19.SuspendLayout();
             panel2.SuspendLayout();
             panel11.SuspendLayout();
             panel33.SuspendLayout();
@@ -209,10 +216,55 @@
             cheats.TabIndex = 0;
             cheats.Text = "Mods";
             // 
+            // panel19
+            // 
+            panel19.BackColor = Color.FromArgb(32, 32, 32);
+            panel19.Controls.Add(hamv);
+            panel19.Controls.Add(label26);
+            panel19.Controls.Add(ham);
+            panel19.Location = new Point(0, 111);
+            panel19.Name = "panel19";
+            panel19.Size = new Size(470, 23);
+            panel19.TabIndex = 13;
+            // 
+            // hamv
+            // 
+            hamv.AutoSize = true;
+            hamv.BackColor = Color.Transparent;
+            hamv.ForeColor = Color.White;
+            hamv.Location = new Point(397, 3);
+            hamv.Name = "hamv";
+            hamv.Size = new Size(45, 15);
+            hamv.TabIndex = 11;
+            hamv.Text = "version";
+            // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.BackColor = Color.Transparent;
+            label26.ForeColor = Color.White;
+            label26.Location = new Point(281, 4);
+            label26.Name = "label26";
+            label26.Size = new Size(97, 15);
+            label26.TabIndex = 8;
+            label26.Text = "hamburbur team";
+            // 
+            // ham
+            // 
+            ham.AutoSize = true;
+            ham.ForeColor = Color.White;
+            ham.Location = new Point(3, 3);
+            ham.Name = "ham";
+            ham.Size = new Size(88, 19);
+            ham.TabIndex = 9;
+            ham.Text = "Hamburbur";
+            ham.UseVisualStyleBackColor = true;
+            // 
             // panel2
             // 
             panel2.AutoScroll = true;
             panel2.AutoScrollMargin = new Size(0, 100);
+            panel2.Controls.Add(panel19);
             panel2.Controls.Add(panel11);
             panel2.Controls.Add(panel31);
             panel2.Controls.Add(panel29);
@@ -400,6 +452,7 @@
             // panel29
             // 
             panel29.BackColor = Color.FromArgb(32, 32, 32);
+            panel29.Controls.Add(arsv);
             panel29.Controls.Add(panel30);
             panel29.Controls.Add(label38);
             panel29.Controls.Add(arss);
@@ -407,6 +460,17 @@
             panel29.Name = "panel29";
             panel29.Size = new Size(470, 23);
             panel29.TabIndex = 22;
+            // 
+            // arsv
+            // 
+            arsv.AutoSize = true;
+            arsv.BackColor = Color.Transparent;
+            arsv.ForeColor = Color.White;
+            arsv.Location = new Point(397, 4);
+            arsv.Name = "arsv";
+            arsv.Size = new Size(45, 15);
+            arsv.TabIndex = 23;
+            arsv.Text = "version";
             // 
             // panel30
             // 
@@ -597,7 +661,6 @@
             // panel5
             // 
             panel5.BackColor = Color.FromArgb(32, 32, 32);
-            panel5.Controls.Add(drawv);
             panel5.Controls.Add(panel24);
             panel5.Controls.Add(label32);
             panel5.Controls.Add(draw);
@@ -605,17 +668,6 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(470, 23);
             panel5.TabIndex = 19;
-            // 
-            // drawv
-            // 
-            drawv.AutoSize = true;
-            drawv.BackColor = Color.Transparent;
-            drawv.ForeColor = Color.White;
-            drawv.Location = new Point(397, 4);
-            drawv.Name = "drawv";
-            drawv.Size = new Size(45, 15);
-            drawv.TabIndex = 18;
-            drawv.Text = "version";
             // 
             // panel24
             // 
@@ -656,9 +708,9 @@
             label32.ForeColor = Color.White;
             label32.Location = new Point(281, 4);
             label32.Name = "label32";
-            label32.Size = new Size(51, 15);
+            label32.Size = new Size(81, 15);
             label32.TabIndex = 8;
-            label32.Text = "drowsiiii";
+            label32.Text = "Doublegold88";
             // 
             // draw
             // 
@@ -666,9 +718,9 @@
             draw.ForeColor = Color.White;
             draw.Location = new Point(3, 3);
             draw.Name = "draw";
-            draw.Size = new Size(90, 19);
+            draw.Size = new Size(109, 19);
             draw.TabIndex = 9;
-            draw.Text = "MonkeDraw";
+            draw.Text = "Cosmetic Buyer";
             draw.UseVisualStyleBackColor = true;
             // 
             // panel23
@@ -718,12 +770,24 @@
             // panel22
             // 
             panel22.BackColor = Color.FromArgb(32, 32, 32);
+            panel22.Controls.Add(noleavesv);
             panel22.Controls.Add(label28);
             panel22.Controls.Add(noleaves);
             panel22.Location = new Point(0, 291);
             panel22.Name = "panel22";
             panel22.Size = new Size(470, 23);
             panel22.TabIndex = 20;
+            // 
+            // noleavesv
+            // 
+            noleavesv.AutoSize = true;
+            noleavesv.BackColor = Color.Transparent;
+            noleavesv.ForeColor = Color.White;
+            noleavesv.Location = new Point(398, 4);
+            noleavesv.Name = "noleavesv";
+            noleavesv.Size = new Size(45, 15);
+            noleavesv.TabIndex = 19;
+            noleavesv.Text = "version";
             // 
             // label28
             // 
@@ -732,9 +796,9 @@
             label28.ForeColor = Color.White;
             label28.Location = new Point(281, 4);
             label28.Name = "label28";
-            label28.Size = new Size(35, 15);
+            label28.Size = new Size(80, 15);
             label28.TabIndex = 8;
-            label28.Text = "astral";
+            label28.Text = "helenskeleton";
             // 
             // noleaves
             // 
@@ -750,12 +814,24 @@
             // panel21
             // 
             panel21.BackColor = Color.FromArgb(32, 32, 32);
+            panel21.Controls.Add(castingv);
             panel21.Controls.Add(label29);
-            panel21.Controls.Add(bans);
+            panel21.Controls.Add(casting);
             panel21.Location = new Point(0, 269);
             panel21.Name = "panel21";
             panel21.Size = new Size(470, 23);
             panel21.TabIndex = 19;
+            // 
+            // castingv
+            // 
+            castingv.AutoSize = true;
+            castingv.BackColor = Color.Transparent;
+            castingv.ForeColor = Color.White;
+            castingv.Location = new Point(396, 4);
+            castingv.Name = "castingv";
+            castingv.Size = new Size(45, 15);
+            castingv.TabIndex = 18;
+            castingv.Text = "version";
             // 
             // label29
             // 
@@ -764,20 +840,21 @@
             label29.ForeColor = Color.White;
             label29.Location = new Point(281, 4);
             label29.Name = "label29";
-            label29.Size = new Size(35, 15);
+            label29.Size = new Size(41, 15);
             label29.TabIndex = 8;
-            label29.Text = "shiny";
+            label29.Text = "Zlothy";
             // 
-            // bans
+            // casting
             // 
-            bans.AutoSize = true;
-            bans.ForeColor = Color.White;
-            bans.Location = new Point(3, 3);
-            bans.Name = "bans";
-            bans.Size = new Size(136, 19);
-            bans.TabIndex = 9;
-            bans.Text = "Ban/Modded Servers";
-            bans.UseVisualStyleBackColor = true;
+            casting.AutoSize = true;
+            casting.ForeColor = Color.White;
+            casting.Location = new Point(3, 3);
+            casting.Name = "casting";
+            casting.Size = new Size(147, 19);
+            casting.TabIndex = 9;
+            casting.Tag = "";
+            casting.Text = "Casting Should Be Free";
+            casting.UseVisualStyleBackColor = true;
             // 
             // panel8
             // 
@@ -1607,6 +1684,8 @@
             Load += Form1_Load;
             control.ResumeLayout(false);
             cheats.ResumeLayout(false);
+            panel19.ResumeLayout(false);
+            panel19.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel11.ResumeLayout(false);
@@ -1749,7 +1828,7 @@
         private Button changelocation;
         private Panel panel21;
         private Label label29;
-        private CheckBox bans;
+        private CheckBox casting;
         private Panel panel22;
         private Label label28;
         private CheckBox noleaves;
@@ -1759,7 +1838,6 @@
         private Label pokrukv;
         private Label toomuchinfov;
         private Panel panel5;
-        private Label drawv;
         private Panel panel24;
         private Label label31;
         private CheckBox checkBox6;
@@ -1799,5 +1877,12 @@
         private CheckBox checkBox9;
         private Label label39;
         private CheckBox infolog;
+        private Label arsv;
+        private Label noleavesv;
+        private Label castingv;
+        private Panel panel19;
+        private Label hamv;
+        private Label label26;
+        private CheckBox ham;
     }
 }
