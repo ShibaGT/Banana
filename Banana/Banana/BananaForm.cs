@@ -282,7 +282,7 @@ namespace Banana
                        (infolog, "CheemsPookieAlt/Gorilla-Info-Logger", "Gorilla.Info.Logger.dll", "info logger", infologv),
                        (whodis, "ShibaGT/WhoDis", "WhoDis.dll", "whodis", whodisv),
                        (arss, "AutoReportSystem/ARS-Files", "ARS.dll", "ars", arsv),
-                       (noleaves, "helenskeleton/No-Leaves", "NoLeaves.dll", "no leaves", noleavesv),
+                       (noleaves, "helenskeleton/NoLeaves", "NoLeaves.dll", "no leaves", noleavesv),
                        (casting, "hamburbur-org/Casting-Should-Be-Free", "CastingShouldBeFree.dll", "casting", castingv),
                        (ham, "hamburbur-org/hamburbur", "hamburbur.dll", "hamburvur", hamv),
                 };
