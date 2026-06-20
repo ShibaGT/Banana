@@ -13,7 +13,7 @@ namespace Banana
 
         private string _gtagLocation = DetectGorillaTagPath();
         private string _bananaDir;
-        private readonly string _currentVersion = "1.2.0";
+        private readonly string _currentVersion = "1.2.1";
         string githubVersion;
 
         private static readonly HttpClient s_httpClient = new HttpClient();
@@ -282,7 +282,7 @@ namespace Banana
                        (infolog, "CheemsPookieAlt/Gorilla-Info-Logger", "Gorilla.Info.Logger.dll", "info logger", infologv),
                        (whodis, "ShibaGT/WhoDis", "WhoDis.dll", "whodis", whodisv),
                        (arss, "AutoReportSystem/ARS-Files", "ARS.dll", "ars", arsv),
-                       (noleaves, "helenskeleton/No-Leaves", "NoLeaves.dll", "no leaves", noleavesv),
+                       (noleaves, "helenskeleton/NoLeaves", "NoLeaves.dll", "no leaves", noleavesv),
                        (casting, "hamburbur-org/Casting-Should-Be-Free", "CastingShouldBeFree.dll", "casting", castingv),
                        (ham, "hamburbur-org/hamburbur", "hamburbur.dll", "hamburvur", hamv),
                 };
