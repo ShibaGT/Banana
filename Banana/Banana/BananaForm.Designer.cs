@@ -31,7 +31,45 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Banana));
             control = new TabControl();
             cheats = new TabPage();
+            panelMod0 = new Panel();
+            noleaves_v = new Label();
+            labelPoopooNoleaves = new Label();
+            noleaves = new CheckBox();
+            panelMod1 = new Panel();
+            antiisraelauth_v = new Label();
+            labelPoopooAntiisrael = new Label();
+            antiisraelauth = new CheckBox();
+            panelMod2 = new Panel();
+            bettercomputer_v = new Label();
+            labelPoopooBettercomp = new Label();
+            bettercomputer = new CheckBox();
+            panelMod3 = new Panel();
+            discordnotifs_v = new Label();
+            labelPoopooDiscord = new Label();
+            discordnotifs = new CheckBox();
+            panelMod4 = new Panel();
+            cosmetxx_v = new Label();
+            labelIidkrCosmetxx = new Label();
+            cosmetxx = new CheckBox();
+            panelMod5 = new Panel();
+            wearitanyway_v = new Label();
+            labelIidkrWear = new Label();
+            wearitanyway = new CheckBox();
+            panelMod6 = new Panel();
+            media_v = new Label();
+            labelIidkrMedia = new Label();
+            media = new CheckBox();
+            panelMod7 = new Panel();
+            tmi_v = new Label();
+            labelIidkrTmi = new Label();
+            tmi = new CheckBox();
             panel19 = new Panel();
+
+            panelMod8 = new Panel();
+            stupidmenu_v = new Label();
+            labelStupidMenu = new Label();
+            stupidmenu = new CheckBox();
+
             hamv = new Label();
             label26 = new Label();
             ham = new CheckBox();
@@ -57,10 +95,6 @@
             checkBox7 = new CheckBox();
             label38 = new Label();
             arss = new CheckBox();
-            panel28 = new Panel();
-            volumev = new Label();
-            label36 = new Label();
-            volume = new CheckBox();
             panel27 = new Panel();
             shirtsv = new Label();
             label35 = new Label();
@@ -133,9 +167,9 @@
             label12 = new Label();
             label11 = new Label();
             panel4 = new Panel();
-            iiv = new Label();
+            poison_v = new Label();
             label9 = new Label();
-            iidk = new CheckBox();
+            poison = new CheckBox();
             label8 = new Label();
             panel3 = new Panel();
             utillav = new Label();
@@ -162,6 +196,18 @@
             control.SuspendLayout();
             cheats.SuspendLayout();
             panel19.SuspendLayout();
+            panelMod8.SuspendLayout();
+            panelMod0.SuspendLayout();
+            panelMod1.SuspendLayout();
+            panelMod2.SuspendLayout();
+            panelMod3.SuspendLayout();
+            panelMod4.SuspendLayout();
+            panelMod5.SuspendLayout();
+            panelMod6.SuspendLayout();
+            panelMod7.SuspendLayout();
+
+
+            panelMod8.SuspendLayout();
             panel2.SuspendLayout();
             panel11.SuspendLayout();
             panel33.SuspendLayout();
@@ -169,7 +215,6 @@
             panel32.SuspendLayout();
             panel29.SuspendLayout();
             panel30.SuspendLayout();
-            panel28.SuspendLayout();
             panel27.SuspendLayout();
             panel26.SuspendLayout();
             panel5.SuspendLayout();
@@ -194,6 +239,358 @@
             panel1.SuspendLayout();
             credits.SuspendLayout();
             SuspendLayout();
+
+            // panelMod0
+            // 
+            panelMod0.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod0.Controls.Add(noleaves_v);
+            panelMod0.Controls.Add(labelPoopooNoleaves);
+            panelMod0.Controls.Add(noleaves);
+            panelMod0.Location = new Point(0, 222);
+            panelMod0.Name = "panelMod0";
+            panelMod0.Size = new Size(470, 23);
+            panelMod0.TabIndex = 23;
+            // 
+            // noleaves_v
+            // 
+            noleaves_v.AutoSize = true;
+            noleaves_v.BackColor = Color.Transparent;
+            noleaves_v.ForeColor = Color.White;
+            noleaves_v.Location = new Point(396, 4);
+            noleaves_v.Name = "noleaves_v";
+            noleaves_v.Size = new Size(45, 15);
+            noleaves_v.TabIndex = 18;
+            noleaves_v.Text = "version";
+            // 
+            // labelPoopooNoleaves
+            // 
+            labelPoopooNoleaves.AutoSize = true;
+            labelPoopooNoleaves.BackColor = Color.Transparent;
+            labelPoopooNoleaves.ForeColor = Color.White;
+            labelPoopooNoleaves.Location = new Point(281, 4);
+            labelPoopooNoleaves.Name = "labelPoopooNoleaves";
+            labelPoopooNoleaves.Size = new Size(45, 15);
+            labelPoopooNoleaves.TabIndex = 11;
+            labelPoopooNoleaves.Text = "poopoovr";
+            // 
+            // noleaves
+            // 
+            noleaves.AutoSize = true;
+            noleaves.ForeColor = Color.White;
+            noleaves.Location = new Point(3, 3);
+            noleaves.Name = "noleaves";
+            noleaves.Size = new Size(81, 19);
+            noleaves.TabIndex = 9;
+            noleaves.Text = "No Leaves";
+            noleaves.UseVisualStyleBackColor = true;
+
+            // panelMod1
+            // 
+            panelMod1.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod1.Controls.Add(antiisraelauth_v);
+            panelMod1.Controls.Add(labelPoopooAntiisrael);
+            panelMod1.Controls.Add(antiisraelauth);
+            panelMod1.Location = new Point(0, 597);
+            panelMod1.Name = "panelMod1";
+            panelMod1.Size = new Size(470, 23);
+            panelMod1.TabIndex = 23;
+            // 
+            // antiisraelauth_v
+            // 
+            antiisraelauth_v.AutoSize = true;
+            antiisraelauth_v.BackColor = Color.Transparent;
+            antiisraelauth_v.ForeColor = Color.White;
+            antiisraelauth_v.Location = new Point(396, 4);
+            antiisraelauth_v.Name = "antiisraelauth_v";
+            antiisraelauth_v.Size = new Size(45, 15);
+            antiisraelauth_v.TabIndex = 18;
+            antiisraelauth_v.Text = "version";
+            // 
+            // labelPoopooAntiisrael
+            // 
+            labelPoopooAntiisrael.AutoSize = true;
+            labelPoopooAntiisrael.BackColor = Color.Transparent;
+            labelPoopooAntiisrael.ForeColor = Color.White;
+            labelPoopooAntiisrael.Location = new Point(281, 4);
+            labelPoopooAntiisrael.Name = "labelPoopooAntiisrael";
+            labelPoopooAntiisrael.Size = new Size(45, 15);
+            labelPoopooAntiisrael.TabIndex = 11;
+            labelPoopooAntiisrael.Text = "poopoovr";
+            // 
+            // antiisraelauth
+            // 
+            antiisraelauth.AutoSize = true;
+            antiisraelauth.ForeColor = Color.White;
+            antiisraelauth.Location = new Point(3, 3);
+            antiisraelauth.Name = "antiisraelauth";
+            antiisraelauth.Size = new Size(81, 19);
+            antiisraelauth.TabIndex = 9;
+            antiisraelauth.Text = "Anti Israel Auth";
+            antiisraelauth.UseVisualStyleBackColor = true;
+
+            // panelMod2
+            // 
+            panelMod2.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod2.Controls.Add(bettercomputer_v);
+            panelMod2.Controls.Add(labelPoopooBettercomp);
+            panelMod2.Controls.Add(bettercomputer);
+            panelMod2.Location = new Point(0, 619);
+            panelMod2.Name = "panelMod2";
+            panelMod2.Size = new Size(470, 23);
+            panelMod2.TabIndex = 23;
+            // 
+            // bettercomputer_v
+            // 
+            bettercomputer_v.AutoSize = true;
+            bettercomputer_v.BackColor = Color.Transparent;
+            bettercomputer_v.ForeColor = Color.White;
+            bettercomputer_v.Location = new Point(396, 4);
+            bettercomputer_v.Name = "bettercomputer_v";
+            bettercomputer_v.Size = new Size(45, 15);
+            bettercomputer_v.TabIndex = 18;
+            bettercomputer_v.Text = "version";
+            // 
+            // labelPoopooBettercomp
+            // 
+            labelPoopooBettercomp.AutoSize = true;
+            labelPoopooBettercomp.BackColor = Color.Transparent;
+            labelPoopooBettercomp.ForeColor = Color.White;
+            labelPoopooBettercomp.Location = new Point(281, 4);
+            labelPoopooBettercomp.Name = "labelPoopooBettercomp";
+            labelPoopooBettercomp.Size = new Size(45, 15);
+            labelPoopooBettercomp.TabIndex = 11;
+            labelPoopooBettercomp.Text = "poopoovr";
+            // 
+            // bettercomputer
+            // 
+            bettercomputer.AutoSize = true;
+            bettercomputer.ForeColor = Color.White;
+            bettercomputer.Location = new Point(3, 3);
+            bettercomputer.Name = "bettercomputer";
+            bettercomputer.Size = new Size(81, 19);
+            bettercomputer.TabIndex = 9;
+            bettercomputer.Text = "Better Computer";
+            bettercomputer.UseVisualStyleBackColor = true;
+
+            // panelMod3
+            // 
+            panelMod3.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod3.Controls.Add(discordnotifs_v);
+            panelMod3.Controls.Add(labelPoopooDiscord);
+            panelMod3.Controls.Add(discordnotifs);
+            panelMod3.Location = new Point(0, 641);
+            panelMod3.Name = "panelMod3";
+            panelMod3.Size = new Size(470, 23);
+            panelMod3.TabIndex = 23;
+            // 
+            // discordnotifs_v
+            // 
+            discordnotifs_v.AutoSize = true;
+            discordnotifs_v.BackColor = Color.Transparent;
+            discordnotifs_v.ForeColor = Color.White;
+            discordnotifs_v.Location = new Point(396, 4);
+            discordnotifs_v.Name = "discordnotifs_v";
+            discordnotifs_v.Size = new Size(45, 15);
+            discordnotifs_v.TabIndex = 18;
+            discordnotifs_v.Text = "version";
+            // 
+            // labelPoopooDiscord
+            // 
+            labelPoopooDiscord.AutoSize = true;
+            labelPoopooDiscord.BackColor = Color.Transparent;
+            labelPoopooDiscord.ForeColor = Color.White;
+            labelPoopooDiscord.Location = new Point(281, 4);
+            labelPoopooDiscord.Name = "labelPoopooDiscord";
+            labelPoopooDiscord.Size = new Size(45, 15);
+            labelPoopooDiscord.TabIndex = 11;
+            labelPoopooDiscord.Text = "poopoovr";
+            // 
+            // discordnotifs
+            // 
+            discordnotifs.AutoSize = true;
+            discordnotifs.ForeColor = Color.White;
+            discordnotifs.Location = new Point(3, 3);
+            discordnotifs.Name = "discordnotifs";
+            discordnotifs.Size = new Size(81, 19);
+            discordnotifs.TabIndex = 9;
+            discordnotifs.Text = "Discord Notifs";
+            discordnotifs.UseVisualStyleBackColor = true;
+
+            // panelMod4
+            // 
+            panelMod4.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod4.Controls.Add(cosmetxx_v);
+            panelMod4.Controls.Add(labelIidkrCosmetxx);
+            panelMod4.Controls.Add(cosmetxx);
+            panelMod4.Location = new Point(0, 244);
+            panelMod4.Name = "panelMod4";
+            panelMod4.Size = new Size(470, 23);
+            panelMod4.TabIndex = 23;
+            // 
+            // cosmetxx_v
+            // 
+            cosmetxx_v.AutoSize = true;
+            cosmetxx_v.BackColor = Color.Transparent;
+            cosmetxx_v.ForeColor = Color.White;
+            cosmetxx_v.Location = new Point(396, 4);
+            cosmetxx_v.Name = "cosmetxx_v";
+            cosmetxx_v.Size = new Size(45, 15);
+            cosmetxx_v.TabIndex = 18;
+            cosmetxx_v.Text = "version";
+            // 
+            // labelIidkrCosmetxx
+            // 
+            labelIidkrCosmetxx.AutoSize = true;
+            labelIidkrCosmetxx.BackColor = Color.Transparent;
+            labelIidkrCosmetxx.ForeColor = Color.White;
+            labelIidkrCosmetxx.Location = new Point(281, 4);
+            labelIidkrCosmetxx.Name = "labelIidkrCosmetxx";
+            labelIidkrCosmetxx.Size = new Size(45, 15);
+            labelIidkrCosmetxx.TabIndex = 11;
+            labelIidkrCosmetxx.Text = "iiDkRemastered";
+            // 
+            // cosmetxx
+            // 
+            cosmetxx.AutoSize = true;
+            cosmetxx.ForeColor = Color.White;
+            cosmetxx.Location = new Point(3, 3);
+            cosmetxx.Name = "cosmetxx";
+            cosmetxx.Size = new Size(81, 19);
+            cosmetxx.TabIndex = 9;
+            cosmetxx.Text = "Forever Cosmetxx";
+            cosmetxx.UseVisualStyleBackColor = true;
+
+            // panelMod5
+            // 
+            panelMod5.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod5.Controls.Add(wearitanyway_v);
+            panelMod5.Controls.Add(labelIidkrWear);
+            panelMod5.Controls.Add(wearitanyway);
+            panelMod5.Location = new Point(0, 442);
+            panelMod5.Name = "panelMod5";
+            panelMod5.Size = new Size(470, 23);
+            panelMod5.TabIndex = 23;
+            // 
+            // wearitanyway_v
+            // 
+            wearitanyway_v.AutoSize = true;
+            wearitanyway_v.BackColor = Color.Transparent;
+            wearitanyway_v.ForeColor = Color.White;
+            wearitanyway_v.Location = new Point(396, 4);
+            wearitanyway_v.Name = "wearitanyway_v";
+            wearitanyway_v.Size = new Size(45, 15);
+            wearitanyway_v.TabIndex = 18;
+            wearitanyway_v.Text = "version";
+            // 
+            // labelIidkrWear
+            // 
+            labelIidkrWear.AutoSize = true;
+            labelIidkrWear.BackColor = Color.Transparent;
+            labelIidkrWear.ForeColor = Color.White;
+            labelIidkrWear.Location = new Point(281, 4);
+            labelIidkrWear.Name = "labelIidkrWear";
+            labelIidkrWear.Size = new Size(45, 15);
+            labelIidkrWear.TabIndex = 11;
+            labelIidkrWear.Text = "iiDkRemastered";
+            // 
+            // wearitanyway
+            // 
+            wearitanyway.AutoSize = true;
+            wearitanyway.ForeColor = Color.White;
+            wearitanyway.Location = new Point(3, 3);
+            wearitanyway.Name = "wearitanyway";
+            wearitanyway.Size = new Size(81, 19);
+            wearitanyway.TabIndex = 9;
+            wearitanyway.Text = "Wear It Anyway";
+            wearitanyway.UseVisualStyleBackColor = true;
+
+            // panelMod6
+            // 
+            panelMod6.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod6.Controls.Add(media_v);
+            panelMod6.Controls.Add(labelIidkrMedia);
+            panelMod6.Controls.Add(media);
+            panelMod6.Location = new Point(0, 200);
+            panelMod6.Name = "panelMod6";
+            panelMod6.Size = new Size(470, 23);
+            panelMod6.TabIndex = 23;
+            // 
+            // media_v
+            // 
+            media_v.AutoSize = true;
+            media_v.BackColor = Color.Transparent;
+            media_v.ForeColor = Color.White;
+            media_v.Location = new Point(396, 4);
+            media_v.Name = "media_v";
+            media_v.Size = new Size(45, 15);
+            media_v.TabIndex = 18;
+            media_v.Text = "version";
+            // 
+            // labelIidkrMedia
+            // 
+            labelIidkrMedia.AutoSize = true;
+            labelIidkrMedia.BackColor = Color.Transparent;
+            labelIidkrMedia.ForeColor = Color.White;
+            labelIidkrMedia.Location = new Point(281, 4);
+            labelIidkrMedia.Name = "labelIidkrMedia";
+            labelIidkrMedia.Size = new Size(45, 15);
+            labelIidkrMedia.TabIndex = 11;
+            labelIidkrMedia.Text = "iiDkRemastered";
+            // 
+            // media
+            // 
+            media.AutoSize = true;
+            media.ForeColor = Color.White;
+            media.Location = new Point(3, 3);
+            media.Name = "media";
+            media.Size = new Size(81, 19);
+            media.TabIndex = 9;
+            media.Text = "Gorilla Media";
+            media.UseVisualStyleBackColor = true;
+
+            // panelMod7
+            // 
+            panelMod7.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod7.Controls.Add(tmi_v);
+            panelMod7.Controls.Add(labelIidkrTmi);
+            panelMod7.Controls.Add(tmi);
+            panelMod7.Location = new Point(0, 464);
+            panelMod7.Name = "panelMod7";
+            panelMod7.Size = new Size(470, 23);
+            panelMod7.TabIndex = 23;
+            // 
+            // tmi_v
+            // 
+            tmi_v.AutoSize = true;
+            tmi_v.BackColor = Color.Transparent;
+            tmi_v.ForeColor = Color.White;
+            tmi_v.Location = new Point(396, 4);
+            tmi_v.Name = "tmi_v";
+            tmi_v.Size = new Size(45, 15);
+            tmi_v.TabIndex = 18;
+            tmi_v.Text = "version";
+            // 
+            // labelIidkrTmi
+            // 
+            labelIidkrTmi.AutoSize = true;
+            labelIidkrTmi.BackColor = Color.Transparent;
+            labelIidkrTmi.ForeColor = Color.White;
+            labelIidkrTmi.Location = new Point(281, 4);
+            labelIidkrTmi.Name = "labelIidkrTmi";
+            labelIidkrTmi.Size = new Size(45, 15);
+            labelIidkrTmi.TabIndex = 11;
+            labelIidkrTmi.Text = "iiDkRemastered";
+            // 
+            // tmi
+            // 
+            tmi.AutoSize = true;
+            tmi.ForeColor = Color.White;
+            tmi.Location = new Point(3, 3);
+            tmi.Name = "tmi";
+            tmi.Size = new Size(81, 19);
+            tmi.TabIndex = 9;
+            tmi.Text = "Too Much Info";
+            tmi.UseVisualStyleBackColor = true;
             // 
             // control
             // 
@@ -215,6 +612,51 @@
             cheats.Size = new Size(492, 231);
             cheats.TabIndex = 0;
             cheats.Text = "Mods";
+
+            // 
+            // panelMod8
+            // 
+            panelMod8.BackColor = Color.FromArgb(32, 32, 32);
+            panelMod8.Controls.Add(stupidmenu_v);
+            panelMod8.Controls.Add(labelStupidMenu);
+            panelMod8.Controls.Add(stupidmenu);
+            panelMod8.Location = new Point(0, 133);
+            panelMod8.Name = "panelMod8";
+            panelMod8.Size = new Size(470, 23);
+            panelMod8.TabIndex = 24;
+            // 
+            // stupidmenu_v
+            // 
+            stupidmenu_v.AutoSize = true;
+            stupidmenu_v.BackColor = Color.Transparent;
+            stupidmenu_v.ForeColor = Color.White;
+            stupidmenu_v.Location = new Point(396, 4);
+            stupidmenu_v.Name = "stupidmenu_v";
+            stupidmenu_v.Size = new Size(45, 15);
+            stupidmenu_v.TabIndex = 18;
+            stupidmenu_v.Text = "version";
+            // 
+            // labelStupidMenu
+            // 
+            labelStupidMenu.AutoSize = true;
+            labelStupidMenu.BackColor = Color.Transparent;
+            labelStupidMenu.ForeColor = Color.White;
+            labelStupidMenu.Location = new Point(281, 4);
+            labelStupidMenu.Name = "labelStupidMenu";
+            labelStupidMenu.Size = new Size(45, 15);
+            labelStupidMenu.TabIndex = 11;
+            labelStupidMenu.Text = "iireborn";
+            // 
+            // stupidmenu
+            // 
+            stupidmenu.AutoSize = true;
+            stupidmenu.ForeColor = Color.White;
+            stupidmenu.Location = new Point(3, 3);
+            stupidmenu.Name = "stupidmenu";
+            stupidmenu.Size = new Size(81, 19);
+            stupidmenu.TabIndex = 9;
+            stupidmenu.Text = "ii's Stupid Menu";
+            stupidmenu.UseVisualStyleBackColor = true;
             // 
             // panel19
             // 
@@ -265,10 +707,21 @@
             panel2.AutoScroll = true;
             panel2.AutoScrollMargin = new Size(0, 100);
             panel2.Controls.Add(panel19);
+            panel2.Controls.Add(panelMod8);
+            panel2.Controls.Add(panelMod0);
+            panel2.Controls.Add(panelMod1);
+            panel2.Controls.Add(panelMod2);
+            panel2.Controls.Add(panelMod3);
+            panel2.Controls.Add(panelMod4);
+            panel2.Controls.Add(panelMod5);
+            panel2.Controls.Add(panelMod6);
+            panel2.Controls.Add(panelMod7);
+
+
+            panel2.Controls.Add(panelMod8);
             panel2.Controls.Add(panel11);
             panel2.Controls.Add(panel31);
             panel2.Controls.Add(panel29);
-            panel2.Controls.Add(panel28);
             panel2.Controls.Add(panel27);
             panel2.Controls.Add(panel26);
             panel2.Controls.Add(panel5);
@@ -302,7 +755,7 @@
             panel11.Controls.Add(panel33);
             panel11.Controls.Add(label39);
             panel11.Controls.Add(infolog);
-            panel11.Location = new Point(0, 555);
+            panel11.Location = new Point(0, 575);
             panel11.Name = "panel11";
             panel11.Size = new Size(470, 23);
             panel11.TabIndex = 23;
@@ -323,8 +776,9 @@
             panel33.BackColor = Color.FromArgb(32, 32, 32);
             panel33.Controls.Add(label18);
             panel33.Controls.Add(checkBox9);
-            panel33.Location = new Point(3, 22);
+            panel33.Location = new Point(-2000, -2000);
             panel33.Name = "panel33";
+            panel33.Visible = false;
             panel33.Size = new Size(480, 23);
             panel33.TabIndex = 15;
             // 
@@ -379,7 +833,7 @@
             panel31.Controls.Add(panel32);
             panel31.Controls.Add(label41);
             panel31.Controls.Add(whodis);
-            panel31.Location = new Point(-1, 399);
+            panel31.Location = new Point(-1, 310);
             panel31.Name = "panel31";
             panel31.Size = new Size(470, 23);
             panel31.TabIndex = 20;
@@ -400,8 +854,9 @@
             panel32.BackColor = Color.FromArgb(32, 32, 32);
             panel32.Controls.Add(label40);
             panel32.Controls.Add(checkBox8);
-            panel32.Location = new Point(3, 22);
+            panel32.Location = new Point(-2000, -2000);
             panel32.Name = "panel32";
+            panel32.Visible = false;
             panel32.Size = new Size(480, 23);
             panel32.TabIndex = 15;
             // 
@@ -456,7 +911,7 @@
             panel29.Controls.Add(panel30);
             panel29.Controls.Add(label38);
             panel29.Controls.Add(arss);
-            panel29.Location = new Point(0, 533);
+            panel29.Location = new Point(0, 553);
             panel29.Name = "panel29";
             panel29.Size = new Size(470, 23);
             panel29.TabIndex = 22;
@@ -477,8 +932,9 @@
             panel30.BackColor = Color.FromArgb(32, 32, 32);
             panel30.Controls.Add(label37);
             panel30.Controls.Add(checkBox7);
-            panel30.Location = new Point(3, 22);
+            panel30.Location = new Point(-2000, -2000);
             panel30.Name = "panel30";
+            panel30.Visible = false;
             panel30.Size = new Size(480, 23);
             panel30.TabIndex = 15;
             // 
@@ -526,57 +982,13 @@
             arss.Text = "Automatic Report System";
             arss.UseVisualStyleBackColor = true;
             // 
-            // panel28
-            // 
-            panel28.BackColor = Color.FromArgb(32, 32, 32);
-            panel28.Controls.Add(volumev);
-            panel28.Controls.Add(label36);
-            panel28.Controls.Add(volume);
-            panel28.Location = new Point(2, 357);
-            panel28.Name = "panel28";
-            panel28.Size = new Size(470, 23);
-            panel28.TabIndex = 23;
-            // 
-            // volumev
-            // 
-            volumev.AutoSize = true;
-            volumev.BackColor = Color.Transparent;
-            volumev.ForeColor = Color.White;
-            volumev.Location = new Point(396, 4);
-            volumev.Name = "volumev";
-            volumev.Size = new Size(45, 15);
-            volumev.TabIndex = 18;
-            volumev.Text = "version";
-            // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.BackColor = Color.Transparent;
-            label36.ForeColor = Color.White;
-            label36.Location = new Point(281, 4);
-            label36.Name = "label36";
-            label36.Size = new Size(41, 15);
-            label36.TabIndex = 8;
-            label36.Text = "Zlothy";
-            // 
-            // volume
-            // 
-            volume.AutoSize = true;
-            volume.ForeColor = Color.White;
-            volume.Location = new Point(3, 3);
-            volume.Name = "volume";
-            volume.Size = new Size(151, 19);
-            volume.TabIndex = 9;
-            volume.Text = "Gorilla Volume Controls";
-            volume.UseVisualStyleBackColor = true;
-            // 
             // panel27
             // 
             panel27.BackColor = Color.FromArgb(32, 32, 32);
             panel27.Controls.Add(shirtsv);
             panel27.Controls.Add(label35);
             panel27.Controls.Add(shirts);
-            panel27.Location = new Point(1, 335);
+            panel27.Location = new Point(1, 398);
             panel27.Name = "panel27";
             panel27.Size = new Size(470, 23);
             panel27.TabIndex = 22;
@@ -620,7 +1032,7 @@
             panel26.Controls.Add(zlothyv);
             panel26.Controls.Add(label34);
             panel26.Controls.Add(zlothy);
-            panel26.Location = new Point(0, 157);
+            panel26.Location = new Point(0, 178);
             panel26.Name = "panel26";
             panel26.Size = new Size(470, 23);
             panel26.TabIndex = 17;
@@ -664,7 +1076,7 @@
             panel5.Controls.Add(panel24);
             panel5.Controls.Add(label32);
             panel5.Controls.Add(draw);
-            panel5.Location = new Point(0, 422);
+            panel5.Location = new Point(0, 509);
             panel5.Name = "panel5";
             panel5.Size = new Size(470, 23);
             panel5.TabIndex = 19;
@@ -674,8 +1086,9 @@
             panel24.BackColor = Color.FromArgb(32, 32, 32);
             panel24.Controls.Add(label31);
             panel24.Controls.Add(checkBox6);
-            panel24.Location = new Point(3, 22);
+            panel24.Location = new Point(-2000, -2000);
             panel24.Name = "panel24";
+            panel24.Visible = false;
             panel24.Size = new Size(480, 23);
             panel24.TabIndex = 15;
             // 
@@ -729,7 +1142,7 @@
             panel23.Controls.Add(pokrukv);
             panel23.Controls.Add(label30);
             panel23.Controls.Add(pokruk);
-            panel23.Location = new Point(1, 313);
+            panel23.Location = new Point(1, 376);
             panel23.Name = "panel23";
             panel23.Size = new Size(470, 23);
             panel23.TabIndex = 21;
@@ -754,7 +1167,7 @@
             label30.Name = "label30";
             label30.Size = new Size(84, 15);
             label30.TabIndex = 8;
-            label30.Text = "iiDk (orig. yizz)";
+            label30.Text = "iiDkRemastered";
             // 
             // pokruk
             // 
@@ -772,9 +1185,9 @@
             panel22.BackColor = Color.FromArgb(32, 32, 32);
             panel22.Controls.Add(noleavesv);
             panel22.Controls.Add(label28);
-            panel22.Controls.Add(noleaves);
-            panel22.Location = new Point(0, 291);
+            panel22.Location = new Point(-2000, -2000);
             panel22.Name = "panel22";
+            panel22.Visible = false;
             panel22.Size = new Size(470, 23);
             panel22.TabIndex = 20;
             // 
@@ -817,7 +1230,7 @@
             panel21.Controls.Add(castingv);
             panel21.Controls.Add(label29);
             panel21.Controls.Add(casting);
-            panel21.Location = new Point(0, 269);
+            panel21.Location = new Point(0, 354);
             panel21.Name = "panel21";
             panel21.Size = new Size(470, 23);
             panel21.TabIndex = 19;
@@ -863,7 +1276,7 @@
             panel8.Controls.Add(panel9);
             panel8.Controls.Add(label16);
             panel8.Controls.Add(libre);
-            panel8.Location = new Point(0, 466);
+            panel8.Location = new Point(0, 332);
             panel8.Name = "panel8";
             panel8.Size = new Size(470, 23);
             panel8.TabIndex = 16;
@@ -884,8 +1297,9 @@
             panel9.BackColor = Color.FromArgb(32, 32, 32);
             panel9.Controls.Add(label15);
             panel9.Controls.Add(checkBox3);
-            panel9.Location = new Point(3, 22);
+            panel9.Location = new Point(-2000, -2000);
             panel9.Name = "panel9";
+            panel9.Visible = false;
             panel9.Size = new Size(480, 23);
             panel9.TabIndex = 15;
             // 
@@ -920,7 +1334,7 @@
             label16.Name = "label16";
             label16.Size = new Size(27, 15);
             label16.TabIndex = 8;
-            label16.Text = "iiDk";
+            label16.Text = "iireborn";
             // 
             // libre
             // 
@@ -939,7 +1353,7 @@
             panel17.Controls.Add(panel18);
             panel17.Controls.Add(label25);
             panel17.Controls.Add(ue);
-            panel17.Location = new Point(0, 510);
+            panel17.Location = new Point(0, 531);
             panel17.Name = "panel17";
             panel17.Size = new Size(470, 23);
             panel17.TabIndex = 18;
@@ -949,8 +1363,9 @@
             panel18.BackColor = Color.FromArgb(32, 32, 32);
             panel18.Controls.Add(label24);
             panel18.Controls.Add(checkBox4);
-            panel18.Location = new Point(3, 22);
+            panel18.Location = new Point(-2000, -2000);
             panel18.Name = "panel18";
+            panel18.Visible = false;
             panel18.Size = new Size(480, 23);
             panel18.TabIndex = 15;
             // 
@@ -1004,9 +1419,9 @@
             panel15.Controls.Add(mediav);
             panel15.Controls.Add(panel16);
             panel15.Controls.Add(label23);
-            panel15.Controls.Add(media);
-            panel15.Location = new Point(0, 488);
+            panel15.Location = new Point(-2000, -2000);
             panel15.Name = "panel15";
+            panel15.Visible = false;
             panel15.Size = new Size(470, 23);
             panel15.TabIndex = 17;
             // 
@@ -1026,8 +1441,9 @@
             panel16.BackColor = Color.FromArgb(32, 32, 32);
             panel16.Controls.Add(label22);
             panel16.Controls.Add(checkBox1);
-            panel16.Location = new Point(3, 22);
+            panel16.Location = new Point(-2000, -2000);
             panel16.Name = "panel16";
+            panel16.Visible = false;
             panel16.Size = new Size(480, 23);
             panel16.TabIndex = 15;
             // 
@@ -1081,7 +1497,7 @@
             panel14.Controls.Add(hzv);
             panel14.Controls.Add(label21);
             panel14.Controls.Add(forhz);
-            panel14.Location = new Point(0, 247);
+            panel14.Location = new Point(0, 288);
             panel14.Name = "panel14";
             panel14.Size = new Size(470, 23);
             panel14.TabIndex = 18;
@@ -1106,7 +1522,7 @@
             label21.Name = "label21";
             label21.Size = new Size(27, 15);
             label21.TabIndex = 8;
-            label21.Text = "iiDk";
+            label21.Text = "iiDkRemastered";
             // 
             // forhz
             // 
@@ -1125,8 +1541,9 @@
             panel13.Controls.Add(cosmetxv);
             panel13.Controls.Add(label20);
             panel13.Controls.Add(cosm);
-            panel13.Location = new Point(0, 225);
+            panel13.Location = new Point(-2000, -2000);
             panel13.Name = "panel13";
+            panel13.Visible = false;
             panel13.Size = new Size(470, 23);
             panel13.TabIndex = 17;
             // 
@@ -1169,7 +1586,7 @@
             panel12.Controls.Add(predv);
             panel12.Controls.Add(label19);
             panel12.Controls.Add(forpreds);
-            panel12.Location = new Point(0, 203);
+            panel12.Location = new Point(0, 266);
             panel12.Name = "panel12";
             panel12.Size = new Size(470, 23);
             panel12.TabIndex = 16;
@@ -1194,7 +1611,7 @@
             label19.Name = "label19";
             label19.Size = new Size(27, 15);
             label19.TabIndex = 8;
-            label19.Text = "iiDk";
+            label19.Text = "iiDkRemastered";
             // 
             // forpreds
             // 
@@ -1213,8 +1630,9 @@
             panel10.Controls.Add(toomuchinfov);
             panel10.Controls.Add(label17);
             panel10.Controls.Add(toomuchinfo);
-            panel10.Location = new Point(0, 180);
+            panel10.Location = new Point(-2000, -2000);
             panel10.Name = "panel10";
+            panel10.Visible = false;
             panel10.Size = new Size(470, 23);
             panel10.TabIndex = 14;
             // 
@@ -1258,7 +1676,7 @@
             panel6.Controls.Add(panel7);
             panel6.Controls.Add(label14);
             panel6.Controls.Add(walksim);
-            panel6.Location = new Point(0, 444);
+            panel6.Location = new Point(0, 420);
             panel6.Name = "panel6";
             panel6.Size = new Size(470, 23);
             panel6.TabIndex = 14;
@@ -1279,8 +1697,9 @@
             panel7.BackColor = Color.FromArgb(32, 32, 32);
             panel7.Controls.Add(label13);
             panel7.Controls.Add(checkBox2);
-            panel7.Location = new Point(3, 22);
+            panel7.Location = new Point(-2000, -2000);
             panel7.Name = "panel7";
+            panel7.Visible = false;
             panel7.Size = new Size(480, 23);
             panel7.TabIndex = 15;
             // 
@@ -1315,7 +1734,7 @@
             label14.Name = "label14";
             label14.Size = new Size(86, 15);
             label14.TabIndex = 8;
-            label14.Text = "iiDk (orig. kyle)";
+            label14.Text = "iireborn";
             // 
             // walksim
             // 
@@ -1333,7 +1752,7 @@
             label12.AutoSize = true;
             label12.BackColor = Color.Transparent;
             label12.ForeColor = Color.White;
-            label12.Location = new Point(0, 383);
+            label12.Location = new Point(0, 491);
             label12.Name = "label12";
             label12.Size = new Size(38, 15);
             label12.TabIndex = 15;
@@ -1344,7 +1763,7 @@
             label11.AutoSize = true;
             label11.BackColor = Color.Transparent;
             label11.ForeColor = Color.White;
-            label11.Location = new Point(0, 139);
+            label11.Location = new Point(0, 160);
             label11.Name = "label11";
             label11.Size = new Size(63, 15);
             label11.TabIndex = 14;
@@ -1353,24 +1772,24 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(32, 32, 32);
-            panel4.Controls.Add(iiv);
+            panel4.Controls.Add(poison_v);
             panel4.Controls.Add(label9);
-            panel4.Controls.Add(iidk);
-            panel4.Location = new Point(0, 88);
+            panel4.Controls.Add(poison);
+            panel4.Location = new Point(0, 89);
             panel4.Name = "panel4";
             panel4.Size = new Size(470, 23);
             panel4.TabIndex = 12;
             // 
-            // iiv
+            // poison_v
             // 
-            iiv.AutoSize = true;
-            iiv.BackColor = Color.Transparent;
-            iiv.ForeColor = Color.White;
-            iiv.Location = new Point(397, 3);
-            iiv.Name = "iiv";
-            iiv.Size = new Size(45, 15);
-            iiv.TabIndex = 11;
-            iiv.Text = "version";
+            poison_v.AutoSize = true;
+            poison_v.BackColor = Color.Transparent;
+            poison_v.ForeColor = Color.White;
+            poison_v.Location = new Point(397, 3);
+            poison_v.Name = "poison_v";
+            poison_v.Size = new Size(45, 15);
+            poison_v.TabIndex = 11;
+            poison_v.Text = "version";
             // 
             // label9
             // 
@@ -1381,18 +1800,18 @@
             label9.Name = "label9";
             label9.Size = new Size(73, 15);
             label9.TabIndex = 8;
-            label9.Text = "kingofnetflix";
+            label9.Text = "snake";
             // 
-            // iidk
+            // poison
             // 
-            iidk.AutoSize = true;
-            iidk.ForeColor = Color.White;
-            iidk.Location = new Point(3, 3);
-            iidk.Name = "iidk";
-            iidk.Size = new Size(68, 19);
-            iidk.TabIndex = 9;
-            iidk.Text = "Seralyth";
-            iidk.UseVisualStyleBackColor = true;
+            poison.AutoSize = true;
+            poison.ForeColor = Color.White;
+            poison.Location = new Point(3, 3);
+            poison.Name = "poison";
+            poison.Size = new Size(68, 19);
+            poison.TabIndex = 9;
+            poison.Text = "Poison";
+            poison.UseVisualStyleBackColor = true;
             // 
             // label8
             // 
@@ -1686,6 +2105,25 @@
             cheats.ResumeLayout(false);
             panel19.ResumeLayout(false);
             panel19.PerformLayout();
+            panelMod8.ResumeLayout(false);
+            panelMod8.PerformLayout();
+            panelMod0.ResumeLayout(false);
+            panelMod0.PerformLayout();
+            panelMod1.ResumeLayout(false);
+            panelMod1.PerformLayout();
+            panelMod2.ResumeLayout(false);
+            panelMod2.PerformLayout();
+            panelMod3.ResumeLayout(false);
+            panelMod3.PerformLayout();
+            panelMod4.ResumeLayout(false);
+            panelMod4.PerformLayout();
+            panelMod5.ResumeLayout(false);
+            panelMod5.PerformLayout();
+            panelMod6.ResumeLayout(false);
+            panelMod6.PerformLayout();
+            panelMod7.ResumeLayout(false);
+            panelMod7.PerformLayout();
+
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             panel11.ResumeLayout(false);
@@ -1700,8 +2138,6 @@
             panel29.PerformLayout();
             panel30.ResumeLayout(false);
             panel30.PerformLayout();
-            panel28.ResumeLayout(false);
-            panel28.PerformLayout();
             panel27.ResumeLayout(false);
             panel27.PerformLayout();
             panel26.ResumeLayout(false);
@@ -1776,7 +2212,7 @@
         private Label label8;
         private Panel panel4;
         private Label label9;
-        private CheckBox iidk;
+        private CheckBox poison;
         private Label label12;
         private Label label11;
         private Panel panel6;
@@ -1808,7 +2244,6 @@
         private Label label22;
         private CheckBox checkBox1;
         private Label label23;
-        private CheckBox media;
         private Button disableenable;
         private Button discord;
         private Label version;
@@ -1818,7 +2253,7 @@
         private CheckBox checkBox4;
         private Label label25;
         private CheckBox ue;
-        private Label iiv;
+        private Label poison_v;
         private Label utillav;
         private Label hzv;
         private Label cosmetxv;
@@ -1831,7 +2266,6 @@
         private CheckBox casting;
         private Panel panel22;
         private Label label28;
-        private CheckBox noleaves;
         private Panel panel23;
         private Label label30;
         private CheckBox pokruk;
@@ -1852,10 +2286,6 @@
         private Label shirtsv;
         private Label label35;
         private CheckBox shirts;
-        private Panel panel28;
-        private Label volumev;
-        private Label label36;
-        private CheckBox volume;
         private Panel panel29;
         private Label infologv;
         private Panel panel30;
@@ -1884,5 +2314,41 @@
         private Label hamv;
         private Label label26;
         private CheckBox ham;
+        private Panel panelMod8;
+        private Label stupidmenu_v;
+        private Label labelStupidMenu;
+        private CheckBox stupidmenu;
+        private Panel panelMod0;
+        private Label noleaves_v;
+        private Label labelPoopooNoleaves;
+        private CheckBox noleaves;
+        private Panel panelMod1;
+        private Label antiisraelauth_v;
+        private Label labelPoopooAntiisrael;
+        private CheckBox antiisraelauth;
+        private Panel panelMod2;
+        private Label bettercomputer_v;
+        private Label labelPoopooBettercomp;
+        private CheckBox bettercomputer;
+        private Panel panelMod3;
+        private Label discordnotifs_v;
+        private Label labelPoopooDiscord;
+        private CheckBox discordnotifs;
+        private Panel panelMod4;
+        private Label cosmetxx_v;
+        private Label labelIidkrCosmetxx;
+        private CheckBox cosmetxx;
+        private Panel panelMod5;
+        private Label wearitanyway_v;
+        private Label labelIidkrWear;
+        private CheckBox wearitanyway;
+        private Panel panelMod6;
+        private Label media_v;
+        private Label labelIidkrMedia;
+        private CheckBox media;
+        private Panel panelMod7;
+        private Label tmi_v;
+        private Label labelIidkrTmi;
+        private CheckBox tmi;
     }
 }

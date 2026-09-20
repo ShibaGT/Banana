@@ -13,7 +13,7 @@ namespace Banana
 
         private string _gtagLocation = DetectGorillaTagPath();
         private string _bananaDir;
-        private readonly string _currentVersion = "1.2.1";
+        private readonly string _currentVersion = "1.2.2";
         string githubVersion;
 
         private static readonly HttpClient s_httpClient = new HttpClient();
@@ -267,24 +267,28 @@ namespace Banana
                 return new (CheckBox, string, string, string, Label)[]
                 {
                        (utilla, "Seralyth/Utilla", "Utilla.dll", "utilla", utillav),
-                       (iidk, "Seralyth/Seralyth-Menu", "Seralyth-Menu.dll", "seralyth menu sigma", iiv),
-                       (libre, "iiDk-the-actual/LibrePad", "LibrePad.dll", "libre", librev),
-                       (forpreds, "iiDk-the-actual/ForeverPreds", "ForeverPreds.dll", "forever preds", predv),
-                       (forhz, "iiDk-the-actual/ForeverHz", "ForeverHz.dll", "hz mod", hzv),
-                       (cosm, "iiDk-the-actual/ForeverCosmetx", "ForeverCosmetx.dll", "cosmetx", cosmetxv),
-                       (media, "iiDk-the-actual/GorillaMedia", "GorillaMedia.dll", "media", mediav),
-                       (pokruk, "iiDk-the-actual/iiCamMod", "iiCamMod.dll", "iicam", pokrukv),
-                       (toomuchinfo, "iiDk-the-actual/TooMuchInfo", "TooMuchInfo.dll", "too much info", toomuchinfov),
-                       (walksim, "iiDk-the-actual/WalkSim", "WalkSim.dll", "walksim", walksimv),
+                       (poison, "heycanihavethis/Poison", "Poison.dll", "poison menu", poison_v),
                        (zlothy, "ZlothY29IQ/Zlothy-Nametag", "ZlothYNametag.dll", "zlothy", zlothyv),
                        (shirts, "developer9998/GorillaShirts", "GorillaShirts.dll", "shirts", shirtsv),
-                       (volume, "ZlothY29IQ/GorillaVolumeControls", "GorillaVolumeControls.dll", "volumecontrols", volumev),
                        (infolog, "CheemsPookieAlt/Gorilla-Info-Logger", "Gorilla.Info.Logger.dll", "info logger", infologv),
                        (whodis, "ShibaGT/WhoDis", "WhoDis.dll", "whodis", whodisv),
                        (arss, "AutoReportSystem/ARS-Files", "ARS.dll", "ars", arsv),
-                       (noleaves, "helenskeleton/NoLeaves", "NoLeaves.dll", "no leaves", noleavesv),
                        (casting, "hamburbur-org/Casting-Should-Be-Free", "CastingShouldBeFree.dll", "casting", castingv),
                        (ham, "hamburbur-org/hamburbur", "hamburbur.dll", "hamburvur", hamv),
+                       (noleaves, "poopoovr/noleaves", "NoLeaves.dll", "no leaves", noleaves_v),
+                       (antiisraelauth, "poopoovr/antiisraelauth", "AntiIsraelAuth.dll", "anti israel auth", antiisraelauth_v),
+                       (bettercomputer, "poopoovr/bettercomputer", "BetterComputer.dll", "better computer", bettercomputer_v),
+                       (discordnotifs, "poopoovr/discordnotifs", "DiscordNotifs.dll", "discord notifs", discordnotifs_v),
+                       (libre, "iireborn/LibrePad-Updated", "LibrePad.dll", "libre", librev),
+                       (forpreds, "iiDkRemastered/ForeverPreds", "ForeverPreds.dll", "forever preds", predv),
+                       (forhz, "iiDkRemastered/ForeverHz", "ForeverHz.dll", "hz mod", hzv),
+                       (pokruk, "iiDkRemastered/iiCamMod", "iiCamMod.dll", "iicam", pokrukv),
+                       (walksim, "iireborn/Walksim-Fixed", "WalkSim.dll", "walksim", walksimv),
+                       (cosmetxx, "iiDkRemastered/ForeverCosmetxx", "ForeverCosmetxx.dll", "forever cosmetxx", cosmetxx_v),
+                       (wearitanyway, "iiDkRemastered/WearItAnyway", "WearItAnyway.dll", "wear it anyway", wearitanyway_v),
+                       (media, "iiDkRemastered/GorillaMedia", "GorillaMedia.dll", "gorilla media", media_v),
+                       (tmi, "iireborn/TooMuchInfo", "TooMuchInfo.dll", "too much info", tmi_v),
+                       (stupidmenu, "iireborn/iis.Stupid.Menu", "ii.s.Stupid.Menu.dll", "stupid menu", stupidmenu_v),
                 };
             }
         }
@@ -302,21 +306,16 @@ namespace Banana
 
         public async void UpdateVersions()
         {
-            try
+            foreach (var (checkBox, repo, outputFile, statusText, versionlabel) in GithubMods)
             {
-                foreach (var (checkBox, repo, outputFile, statusText, versionlabel) in GithubMods)
+                try
                 {
                     await GetVersionFromGithub(repo);
                     versionlabel.InvokeIfRequired(() => versionlabel.Text = githubVersion);
                 }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("An error occurred while fetching mod versions.");
-                foreach (var (checkBox, repo, outputFile, statusText, versionlabel) in GithubMods)
+                catch
                 {
-                    if (versionlabel.Text == "version")
-                        versionlabel.Text = "(n/a)";
+                    versionlabel.InvokeIfRequired(() => versionlabel.Text = "(n/a)");
                 }
             }
         }
@@ -510,6 +509,16 @@ namespace Banana
         }
 
         private void infolog_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void antiisraelauth_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void stupidmenu_CheckedChanged(object sender, EventArgs e)
         {
 
         }
